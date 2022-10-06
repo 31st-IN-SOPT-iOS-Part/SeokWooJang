@@ -7,7 +7,14 @@
 
 import UIKit
 extension UIColor {
-    @nonobjc class var kakaoYellow: UIColor {
-        return UIColor(red: 254.0 / 255.0, green: 229.0 / 255.0, blue: 0.0 / 255.0, alpha: 1.0)
+    
+    convenience init(r: Int, g: Int, b: Int) {
+        self.init(red: CGFloat(r)/255,green: CGFloat(g)/255, blue: CGFloat(b)/255, alpha: 1)
     }
+    
+    
+    @nonobjc class var kakaoYellow: UIColor {
+        return UIColor(r: 249, g: 229, b: 78)
+    }
+    
 }

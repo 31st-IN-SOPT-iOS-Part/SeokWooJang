@@ -20,6 +20,8 @@
 		876BD98128EF2A68000CCBC8 /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876BD98028EF2A68000CCBC8 /* UIStackView+.swift */; };
 		876BD98328EF2ABE000CCBC8 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876BD98228EF2ABE000CCBC8 /* UIColor+.swift */; };
 		876BD98B28EF4708000CCBC8 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876BD98A28EF4708000CCBC8 /* BaseViewController.swift */; };
+		876BD98E28EF510D000CCBC8 /* AuthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876BD98D28EF510D000CCBC8 /* AuthTextField.swift */; };
+		876BD99128EF61DB000CCBC8 /* KakaoColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876BD99028EF61DB000CCBC8 /* KakaoColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		876BD98028EF2A68000CCBC8 /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
 		876BD98228EF2ABE000CCBC8 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		876BD98A28EF4708000CCBC8 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		876BD98D28EF510D000CCBC8 /* AuthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTextField.swift; sourceTree = "<group>"; };
+		876BD99028EF61DB000CCBC8 /* KakaoColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				875A663228EEAE0B00368248 /* Assets.xcassets */,
+				876BD98F28EF61CD000CCBC8 /* Color */,
 				876BD98728EF4586000CCBC8 /* Storyboard */,
 				876BD98628EF455A000CCBC8 /* Support */,
 			);
@@ -114,6 +119,7 @@
 		876BD98428EF4511000CCBC8 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				876BD98C28EF5101000CCBC8 /* DesignSystem */,
 				876BD98928EF46CC000CCBC8 /* Base */,
 				876BD97D28EF250C000CCBC8 /* Extension */,
 			);
@@ -162,6 +168,22 @@
 				876BD98A28EF4708000CCBC8 /* BaseViewController.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		876BD98C28EF5101000CCBC8 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				876BD98D28EF510D000CCBC8 /* AuthTextField.swift */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		876BD98F28EF61CD000CCBC8 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				876BD99028EF61DB000CCBC8 /* KakaoColor.swift */,
+			);
+			path = Color;
 			sourceTree = "<group>";
 		};
 		9AC91FD2E50CDE785D3C5D28 /* Pods */ = {
@@ -297,7 +319,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				876BD98128EF2A68000CCBC8 /* UIStackView+.swift in Sources */,
+				876BD98E28EF510D000CCBC8 /* AuthTextField.swift in Sources */,
 				876BD98328EF2ABE000CCBC8 /* UIColor+.swift in Sources */,
+				876BD99128EF61DB000CCBC8 /* KakaoColor.swift in Sources */,
 				876BD97F28EF2520000CCBC8 /* UIView+.swift in Sources */,
 				875A662E28EEAE0A00368248 /* SignInViewController.swift in Sources */,
 				873586FB28EEB9EF0036624B /* WelcomeViewController.swift in Sources */,
