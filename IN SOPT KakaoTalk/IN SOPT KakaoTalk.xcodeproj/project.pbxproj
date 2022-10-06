@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56F0DA850B1E012178737CE5 /* Pods_IN_SOPT_KakaoTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33B8DCEF672096ED9F97D51E /* Pods_IN_SOPT_KakaoTalk.framework */; };
 		873586F928EEB9E40036624B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873586F828EEB9E40036624B /* SignUpViewController.swift */; };
 		873586FB28EEB9EF0036624B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873586FA28EEB9EF0036624B /* WelcomeViewController.swift */; };
 		875A662A28EEAE0A00368248 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875A662928EEAE0A00368248 /* AppDelegate.swift */; };
@@ -18,9 +19,13 @@
 		876BD97F28EF2520000CCBC8 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876BD97E28EF2520000CCBC8 /* UIView+.swift */; };
 		876BD98128EF2A68000CCBC8 /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876BD98028EF2A68000CCBC8 /* UIStackView+.swift */; };
 		876BD98328EF2ABE000CCBC8 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876BD98228EF2ABE000CCBC8 /* UIColor+.swift */; };
+		876BD98B28EF4708000CCBC8 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876BD98A28EF4708000CCBC8 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33B8DCEF672096ED9F97D51E /* Pods_IN_SOPT_KakaoTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IN_SOPT_KakaoTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A326CB320716349E834A53A /* Pods-IN SOPT KakaoTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IN SOPT KakaoTalk.debug.xcconfig"; path = "Target Support Files/Pods-IN SOPT KakaoTalk/Pods-IN SOPT KakaoTalk.debug.xcconfig"; sourceTree = "<group>"; };
+		84402F3C72679121E0B9DA5F /* Pods-IN SOPT KakaoTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IN SOPT KakaoTalk.release.xcconfig"; path = "Target Support Files/Pods-IN SOPT KakaoTalk/Pods-IN SOPT KakaoTalk.release.xcconfig"; sourceTree = "<group>"; };
 		873586F828EEB9E40036624B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		873586FA28EEB9EF0036624B /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		875A662628EEAE0A00368248 /* IN SOPT KakaoTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IN SOPT KakaoTalk.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,6 +39,7 @@
 		876BD97E28EF2520000CCBC8 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		876BD98028EF2A68000CCBC8 /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
 		876BD98228EF2ABE000CCBC8 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		876BD98A28EF4708000CCBC8 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56F0DA850B1E012178737CE5 /* Pods_IN_SOPT_KakaoTalk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +59,8 @@
 			children = (
 				875A662828EEAE0A00368248 /* IN SOPT KakaoTalk */,
 				875A662728EEAE0A00368248 /* Products */,
+				9AC91FD2E50CDE785D3C5D28 /* Pods */,
+				A4E2C6F0718BD1330F5581E0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,9 +75,10 @@
 		875A662828EEAE0A00368248 /* IN SOPT KakaoTalk */ = {
 			isa = PBXGroup;
 			children = (
-				875A663F28EEAE3D00368248 /* Configuration */,
+				876BD98428EF4511000CCBC8 /* Global */,
+				876BD98528EF4539000CCBC8 /* Network */,
 				875A663D28EEAE3300368248 /* Resource */,
-				875A663E28EEAE3900368248 /* Source */,
+				875A663E28EEAE3900368248 /* Screen */,
 			);
 			path = "IN SOPT KakaoTalk";
 			sourceTree = "<group>";
@@ -77,31 +87,18 @@
 			isa = PBXGroup;
 			children = (
 				875A663228EEAE0B00368248 /* Assets.xcassets */,
-				876BD97D28EF250C000CCBC8 /* Extension */,
+				876BD98728EF4586000CCBC8 /* Storyboard */,
+				876BD98628EF455A000CCBC8 /* Support */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		875A663E28EEAE3900368248 /* Source */ = {
+		875A663E28EEAE3900368248 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				875A662D28EEAE0A00368248 /* SignInViewController.swift */,
-				873586F828EEB9E40036624B /* SignUpViewController.swift */,
-				873586FA28EEB9EF0036624B /* WelcomeViewController.swift */,
+				876BD98828EF45D5000CCBC8 /* Login */,
 			);
-			path = Source;
-			sourceTree = "<group>";
-		};
-		875A663F28EEAE3D00368248 /* Configuration */ = {
-			isa = PBXGroup;
-			children = (
-				875A662F28EEAE0A00368248 /* Main.storyboard */,
-				875A663428EEAE0B00368248 /* LaunchScreen.storyboard */,
-				875A662928EEAE0A00368248 /* AppDelegate.swift */,
-				875A662B28EEAE0A00368248 /* SceneDelegate.swift */,
-				875A663728EEAE0B00368248 /* Info.plist */,
-			);
-			path = Configuration;
+			path = Screen;
 			sourceTree = "<group>";
 		};
 		876BD97D28EF250C000CCBC8 /* Extension */ = {
@@ -114,6 +111,76 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		876BD98428EF4511000CCBC8 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				876BD98928EF46CC000CCBC8 /* Base */,
+				876BD97D28EF250C000CCBC8 /* Extension */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		876BD98528EF4539000CCBC8 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		876BD98628EF455A000CCBC8 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				875A663728EEAE0B00368248 /* Info.plist */,
+				875A662928EEAE0A00368248 /* AppDelegate.swift */,
+				875A662B28EEAE0A00368248 /* SceneDelegate.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		876BD98728EF4586000CCBC8 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				875A662F28EEAE0A00368248 /* Main.storyboard */,
+				875A663428EEAE0B00368248 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		876BD98828EF45D5000CCBC8 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				875A662D28EEAE0A00368248 /* SignInViewController.swift */,
+				873586F828EEB9E40036624B /* SignUpViewController.swift */,
+				873586FA28EEB9EF0036624B /* WelcomeViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		876BD98928EF46CC000CCBC8 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				876BD98A28EF4708000CCBC8 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		9AC91FD2E50CDE785D3C5D28 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3A326CB320716349E834A53A /* Pods-IN SOPT KakaoTalk.debug.xcconfig */,
+				84402F3C72679121E0B9DA5F /* Pods-IN SOPT KakaoTalk.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A4E2C6F0718BD1330F5581E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				33B8DCEF672096ED9F97D51E /* Pods_IN_SOPT_KakaoTalk.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -121,9 +188,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 875A663A28EEAE0B00368248 /* Build configuration list for PBXNativeTarget "IN SOPT KakaoTalk" */;
 			buildPhases = (
+				834EB2E4250FBB49F33A1350 /* [CP] Check Pods Manifest.lock */,
 				875A662228EEAE0A00368248 /* Sources */,
 				875A662328EEAE0A00368248 /* Frameworks */,
 				875A662428EEAE0A00368248 /* Resources */,
+				F9A39DB753FF1E5B0DC70374 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -150,7 +219,7 @@
 				};
 			};
 			buildConfigurationList = 875A662128EEAE0A00368248 /* Build configuration list for PBXProject "IN SOPT KakaoTalk" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -180,6 +249,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		834EB2E4250FBB49F33A1350 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IN SOPT KakaoTalk-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9A39DB753FF1E5B0DC70374 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IN SOPT KakaoTalk/Pods-IN SOPT KakaoTalk-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IN SOPT KakaoTalk/Pods-IN SOPT KakaoTalk-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IN SOPT KakaoTalk/Pods-IN SOPT KakaoTalk-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		875A662228EEAE0A00368248 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -190,6 +301,7 @@
 				876BD97F28EF2520000CCBC8 /* UIView+.swift in Sources */,
 				875A662E28EEAE0A00368248 /* SignInViewController.swift in Sources */,
 				873586FB28EEB9EF0036624B /* WelcomeViewController.swift in Sources */,
+				876BD98B28EF4708000CCBC8 /* BaseViewController.swift in Sources */,
 				875A662A28EEAE0A00368248 /* AppDelegate.swift in Sources */,
 				873586F928EEB9E40036624B /* SignUpViewController.swift in Sources */,
 				875A662C28EEAE0A00368248 /* SceneDelegate.swift in Sources */,
@@ -334,6 +446,7 @@
 		};
 		875A663B28EEAE0B00368248 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A326CB320716349E834A53A /* Pods-IN SOPT KakaoTalk.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -341,7 +454,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T6DNHAHXG9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "IN SOPT KakaoTalk/Configuration/Info.plist";
+				INFOPLIST_FILE = "IN SOPT KakaoTalk/Resource/Support/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -362,6 +475,7 @@
 		};
 		875A663C28EEAE0B00368248 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84402F3C72679121E0B9DA5F /* Pods-IN SOPT KakaoTalk.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -369,7 +483,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T6DNHAHXG9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "IN SOPT KakaoTalk/Configuration/Info.plist";
+				INFOPLIST_FILE = "IN SOPT KakaoTalk/Resource/Support/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
