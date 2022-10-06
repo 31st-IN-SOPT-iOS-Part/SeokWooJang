@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		873586F928EEB9E40036624B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873586F828EEB9E40036624B /* SignUpViewController.swift */; };
+		873586FB28EEB9EF0036624B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873586FA28EEB9EF0036624B /* WelcomeViewController.swift */; };
 		875A662A28EEAE0A00368248 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875A662928EEAE0A00368248 /* AppDelegate.swift */; };
 		875A662C28EEAE0A00368248 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875A662B28EEAE0A00368248 /* SceneDelegate.swift */; };
 		875A662E28EEAE0A00368248 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875A662D28EEAE0A00368248 /* SignInViewController.swift */; };
 		875A663128EEAE0A00368248 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 875A662F28EEAE0A00368248 /* Main.storyboard */; };
 		875A663328EEAE0B00368248 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 875A663228EEAE0B00368248 /* Assets.xcassets */; };
 		875A663628EEAE0B00368248 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 875A663428EEAE0B00368248 /* LaunchScreen.storyboard */; };
+		876BD97F28EF2520000CCBC8 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876BD97E28EF2520000CCBC8 /* UIView+.swift */; };
+		876BD98128EF2A68000CCBC8 /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876BD98028EF2A68000CCBC8 /* UIStackView+.swift */; };
+		876BD98328EF2ABE000CCBC8 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876BD98228EF2ABE000CCBC8 /* UIColor+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		873586F828EEB9E40036624B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		873586FA28EEB9EF0036624B /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		875A662628EEAE0A00368248 /* IN SOPT KakaoTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IN SOPT KakaoTalk.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		875A662928EEAE0A00368248 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		875A662B28EEAE0A00368248 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +31,9 @@
 		875A663228EEAE0B00368248 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		875A663528EEAE0B00368248 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		875A663728EEAE0B00368248 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		876BD97E28EF2520000CCBC8 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		876BD98028EF2A68000CCBC8 /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
+		876BD98228EF2ABE000CCBC8 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				875A663228EEAE0B00368248 /* Assets.xcassets */,
+				876BD97D28EF250C000CCBC8 /* Extension */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -75,6 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				875A662D28EEAE0A00368248 /* SignInViewController.swift */,
+				873586F828EEB9E40036624B /* SignUpViewController.swift */,
+				873586FA28EEB9EF0036624B /* WelcomeViewController.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -89,6 +102,16 @@
 				875A663728EEAE0B00368248 /* Info.plist */,
 			);
 			path = Configuration;
+			sourceTree = "<group>";
+		};
+		876BD97D28EF250C000CCBC8 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				876BD97E28EF2520000CCBC8 /* UIView+.swift */,
+				876BD98028EF2A68000CCBC8 /* UIStackView+.swift */,
+				876BD98228EF2ABE000CCBC8 /* UIColor+.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,8 +185,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				876BD98128EF2A68000CCBC8 /* UIStackView+.swift in Sources */,
+				876BD98328EF2ABE000CCBC8 /* UIColor+.swift in Sources */,
+				876BD97F28EF2520000CCBC8 /* UIView+.swift in Sources */,
 				875A662E28EEAE0A00368248 /* SignInViewController.swift in Sources */,
+				873586FB28EEB9EF0036624B /* WelcomeViewController.swift in Sources */,
 				875A662A28EEAE0A00368248 /* AppDelegate.swift in Sources */,
+				873586F928EEB9E40036624B /* SignUpViewController.swift in Sources */,
 				875A662C28EEAE0A00368248 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
