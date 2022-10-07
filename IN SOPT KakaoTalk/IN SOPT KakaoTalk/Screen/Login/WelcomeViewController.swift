@@ -14,7 +14,7 @@ class WelcomeViewController : UIViewController{
     
     private let welcomeLabel : UILabel = {
         let label = UILabel()
-        label.text = "님\n환영합니다"
+        label.text = "000님\n환영합니다"
         label.font = .systemFont(ofSize: 25, weight: .bold)
         label.textAlignment = .center
         label.numberOfLines = 2
@@ -53,7 +53,8 @@ class WelcomeViewController : UIViewController{
         
         view.addSubviews([
                             welcomeLabel,
-                            confirmButton])
+                            confirmButton
+                        ])
         
         welcomeLabel.snp.makeConstraints {
             $0.centerX.equalToSuperview()
@@ -75,6 +76,10 @@ class WelcomeViewController : UIViewController{
         
         beforeVC.popToRootViewController(animated: true)
         dismiss(animated: true)
+    }
+    
+    func dataBind(email: String){
+        welcomeLabel.text = "\(email)님\n환영합니다"
     }
     
 }

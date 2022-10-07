@@ -32,7 +32,7 @@ class SignInViewController: UIViewController {
     private let emailTextField : AuthTextField = {
         let textField = AuthTextField()
         textField.placeholder = "이메일 또는 전화번호"
-        textField.clearButtonMode = .whileEditing
+        textField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         return textField
     }()
     
@@ -40,7 +40,7 @@ class SignInViewController: UIViewController {
         let textField = AuthTextField()
         textField.placeholder = "비밀번호"
         textField.isSecureTextEntry = true
-        textField.clearButtonMode = .whileEditing
+        textField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         return textField
     }()
     
@@ -72,12 +72,26 @@ class SignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setDelegate()
         setUI()
         setLayout()
         
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        
+        resetTextField(emailTextField)
+        resetTextField(passwordTextField)
+        textFieldDidChange()
     }
     
     //MARK: - Custom Method
+    
+    private func setDelegate(){
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+    }
     
     private func setUI(){
         view.backgroundColor = .white
@@ -85,14 +99,14 @@ class SignInViewController: UIViewController {
     
     private func setLayout(){
         
-        
         view.addSubviews([
                             welcomeLabel,
                             descriptionLabel,
                             emailTextField,
                             passwordTextField,
                             signInButton,
-                            signUpButton])
+                            signUpButton
+                        ])
         
         welcomeLabel.snp.makeConstraints {
             $0.centerX.equalToSuperview()
@@ -126,30 +140,71 @@ class SignInViewController: UIViewController {
             $0.height.equalTo(45)
         }
         
-
-        
     }
     
-   @objc func signInButtonPressed() {
-       
-       let welcomeVC = WelcomeViewController()
-       
-       guard let email = emailTextField.text else { return }
-       
-       
-       //welcomeVC.dataBind(email: email)
-       welcomeVC.modalPresentationStyle = .fullScreen
-       present(welcomeVC, animated: true)
-       
-   }
-   
-   @objc func signUpButtonPressed() {
-       
-       let signUpVC = SignUpViewController()
-       navigationController?.pushViewController(signUpVC, animated: true)
-       
-   }
+    private func resetTextField(_ textfield: UITextField){
+        textfield.text = ""
+    }
     
+    private func goToWelcomeVC(){
+        
+        let welcomeVC = WelcomeViewController()
+        welcomeVC.dataBind(email: emailTextField.text!)
+        welcomeVC.modalPresentationStyle = .fullScreen
+        present(welcomeVC, animated: true)
+    }
+    
+    private func goToSignUpVC(){
+        
+        let signUpVC = SignUpViewController()
+        navigationController?.pushViewController(signUpVC, animated: true)
+    }
+    
+    //MARK: - Action Method
+    
+    
+    @objc private func signInButtonPressed() {
+   
+        if emailTextField.isValid && passwordTextField.isValid {
+            goToWelcomeVC()
+        } else {
+            print("이메일과 비밀번호를 제대로 입력바람 ㅋ")
+        }
+   
+    }
+   
+    @objc private func signUpButtonPressed() {
+            goToSignUpVC()
+    }
+   
+    @objc private func textFieldDidChange(){
+        
+        if emailTextField.isValid && passwordTextField.isValid {
+            signInButton.backgroundColor = .kakaoYellow
+        } else {
+            signInButton.backgroundColor = .systemGray6
+        }
+    }
+    
+    
+    
+}
 
+//MARK: - Extension
 
+extension SignInViewController : UITextFieldDelegate {
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+        guard let textField = textField as? AuthTextField else { return }
+        textField.underLineView.backgroundColor = .black
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        
+        guard let textField = textField as? AuthTextField else { return }
+        textField.underLineView.backgroundColor = .systemGray4
+    }
+    
+    
 }

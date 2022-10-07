@@ -22,7 +22,7 @@ class SignUpViewController : UIViewController{
     private let emailTextField : AuthTextField = {
         let textField = AuthTextField()
         textField.placeholder = "이메일 또는 전화번호"
-        textField.clearButtonMode = .whileEditing
+        textField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         return textField
     }()
     
@@ -30,7 +30,7 @@ class SignUpViewController : UIViewController{
         let textField = AuthTextField()
         textField.placeholder = "비밀번호"
         textField.isSecureTextEntry = true
-        textField.clearButtonMode = .whileEditing
+        textField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         return textField
     }()
     
@@ -38,7 +38,7 @@ class SignUpViewController : UIViewController{
         let textField = AuthTextField()
         textField.placeholder = "비밀번호 확인"
         textField.isSecureTextEntry = true
-        textField.clearButtonMode = .whileEditing
+        textField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         return textField
     }()
     
@@ -67,8 +67,8 @@ class SignUpViewController : UIViewController{
     //MARK: - Custom Method
     
     private func setUI(){
-        view.backgroundColor = .white
         
+        view.backgroundColor = .white
     }
     
     private func setLayout(){
@@ -79,8 +79,7 @@ class SignUpViewController : UIViewController{
                             passwordTextField,
                             confirmPasswordTextField,
                             signUpButton
-                            
-                            ])
+                        ])
         
         welcomeLabel.snp.makeConstraints {
             $0.centerX.equalToSuperview()
@@ -109,11 +108,21 @@ class SignUpViewController : UIViewController{
         }
     }
     
+    //MARK: - @objc Method
+    
     @objc private func signUpButtonPressed(){
         let welcomeVC = WelcomeViewController()
         welcomeVC.modalPresentationStyle = .fullScreen
-        
         present(welcomeVC, animated: true)
+    }
+    
+    @objc private func textFieldDidChange(){
+        
+        if emailTextField.isValid && passwordTextField.isValid && confirmPasswordTextField.isValid{
+            signUpButton.backgroundColor = .kakaoYellow
+        } else {
+            signUpButton.backgroundColor = .systemGray6
+        }
     }
     
 }
