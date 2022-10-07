@@ -147,7 +147,6 @@ class SignInViewController: UIViewController {
     }
     
     private func goToWelcomeVC(){
-        
         let welcomeVC = WelcomeViewController()
         welcomeVC.dataBind(email: emailTextField.text!)
         welcomeVC.modalPresentationStyle = .fullScreen
@@ -155,7 +154,6 @@ class SignInViewController: UIViewController {
     }
     
     private func goToSignUpVC(){
-        
         let signUpVC = SignUpViewController()
         navigationController?.pushViewController(signUpVC, animated: true)
     }
@@ -185,8 +183,6 @@ class SignInViewController: UIViewController {
             signInButton.backgroundColor = .systemGray6
         }
     }
-    
-    
     
 }
 

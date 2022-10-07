@@ -108,12 +108,32 @@ class SignUpViewController : UIViewController{
         }
     }
     
+    private func checkPassword() -> Bool{
+        if passwordTextField.isValid && confirmPasswordTextField.isValid {
+            if passwordTextField.text! == confirmPasswordTextField.text! {
+                return true
+            }
+        }
+        return false
+    }
+    
+    private func goToWelcomeVC(){
+        let welcomeVC = WelcomeViewController()
+        welcomeVC.dataBind(email: emailTextField.text!)
+        welcomeVC.modalPresentationStyle = .fullScreen
+        present(welcomeVC, animated: true)
+    }
+    
     //MARK: - @objc Method
     
     @objc private func signUpButtonPressed(){
-        let welcomeVC = WelcomeViewController()
-        welcomeVC.modalPresentationStyle = .fullScreen
-        present(welcomeVC, animated: true)
+        
+        if checkPassword() {
+            goToWelcomeVC()
+        } else {
+            print("비밀번호가 일치하지 않습니다")
+        }
+        
     }
     
     @objc private func textFieldDidChange(){
@@ -124,5 +144,22 @@ class SignUpViewController : UIViewController{
             signUpButton.backgroundColor = .systemGray6
         }
     }
+    
+}
+
+extension SignUpViewController : UITextFieldDelegate {
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+        guard let textField = textField as? AuthTextField else { return }
+        textField.underLineView.backgroundColor = .black
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        
+        guard let textField = textField as? AuthTextField else { return }
+        textField.underLineView.backgroundColor = .systemGray4
+    }
+    
     
 }
