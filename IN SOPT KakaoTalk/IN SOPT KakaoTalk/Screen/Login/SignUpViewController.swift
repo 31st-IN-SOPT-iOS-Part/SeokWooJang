@@ -59,12 +59,20 @@ class SignUpViewController : UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setDelegate()
         setUI()
         setLayout()
     }
     
+    
+    
     //MARK: - Custom Method
+    
+    private func setDelegate(){
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        confirmPasswordTextField.delegate = self
+    }
     
     private func setUI(){
         
