@@ -72,7 +72,6 @@ class WelcomeViewController : UIViewController{
     @objc private func confirmButtonPressed(){
         
         let beforeVC = self.presentingViewController
-        print(beforeVC)
         guard let beforeVC = beforeVC as? UINavigationController else {return}
         
         beforeVC.popToRootViewController(animated: true)

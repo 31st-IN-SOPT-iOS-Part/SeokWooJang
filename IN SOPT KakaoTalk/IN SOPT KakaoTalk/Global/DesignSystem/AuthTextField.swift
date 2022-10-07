@@ -20,8 +20,7 @@ class AuthTextField: UITextField {
     
     var isValid : Bool {
         get {
-               if text!.isEmpty { return false }
-                    else { return true }
+                return !text!.isEmpty
             }
     }
     
