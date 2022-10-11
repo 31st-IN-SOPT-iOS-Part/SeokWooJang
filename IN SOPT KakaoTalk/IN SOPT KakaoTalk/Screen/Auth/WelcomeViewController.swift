@@ -44,13 +44,10 @@ class WelcomeViewController : UIViewController{
     //MARK: - Custom Method
     
     private func setUI(){
-        
         view.backgroundColor = .white
-        
     }
     
     private func setLayout(){
-        
         view.addSubviews([
                             welcomeLabel,
                             confirmButton
@@ -66,18 +63,30 @@ class WelcomeViewController : UIViewController{
             $0.leading.trailing.equalToSuperview().inset(25)
             $0.height.equalTo(45)
         }
-        
-    }
-    
-    @objc private func confirmButtonPressed(){
-        
-        guard let beforeVC = self.presentingViewController as? UINavigationController else {return}
-        beforeVC.popToRootViewController(animated: true)
-        dismiss(animated: true)
     }
     
     func dataBind(email: String){
         welcomeLabel.text = "\(email)님\n환영합니다"
     }
+    
+    private func goToSignInVC(){
+        guard let beforeVC = self.presentingViewController as? UINavigationController else {return}
+        beforeVC.popToRootViewController(animated: true)
+        dismiss(animated: true)
+    }
+    
+    private func goToMainTabBarController(){
+        let mainTabBarController = MainTabBarController()
+        guard let window = UIApplication.shared.windows.first else { return }
+        window.rootViewController = mainTabBarController
+    }
+    
+    //MARK: - Action Method
+    
+    @objc private func confirmButtonPressed(){
+        //goToSignInVC()
+        goToMainTabBarController()
+    }
+    
     
 }

@@ -22,6 +22,8 @@
 		876BD98B28EF4708000CCBC8 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876BD98A28EF4708000CCBC8 /* BaseViewController.swift */; };
 		876BD98E28EF510D000CCBC8 /* AuthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876BD98D28EF510D000CCBC8 /* AuthTextField.swift */; };
 		876BD99128EF61DB000CCBC8 /* KakaoColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876BD99028EF61DB000CCBC8 /* KakaoColor.swift */; };
+		87C88AB228F53F09004D9276 /* FriendMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C88AB128F53F09004D9276 /* FriendMainViewController.swift */; };
+		87C88AB428F53FA2004D9276 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C88AB328F53FA2004D9276 /* MainTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		876BD98A28EF4708000CCBC8 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		876BD98D28EF510D000CCBC8 /* AuthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTextField.swift; sourceTree = "<group>"; };
 		876BD99028EF61DB000CCBC8 /* KakaoColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoColor.swift; sourceTree = "<group>"; };
+		87C88AB128F53F09004D9276 /* FriendMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendMainViewController.swift; sourceTree = "<group>"; };
+		87C88AB328F53FA2004D9276 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +105,9 @@
 		875A663E28EEAE3900368248 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				876BD98828EF45D5000CCBC8 /* Login */,
+				876BD98928EF46CC000CCBC8 /* Base */,
+				876BD98828EF45D5000CCBC8 /* Auth */,
+				87C88AB028F53D17004D9276 /* Friend */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -120,7 +126,6 @@
 			isa = PBXGroup;
 			children = (
 				876BD98C28EF5101000CCBC8 /* DesignSystem */,
-				876BD98928EF46CC000CCBC8 /* Base */,
 				876BD97D28EF250C000CCBC8 /* Extension */,
 			);
 			path = Global;
@@ -152,20 +157,21 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
-		876BD98828EF45D5000CCBC8 /* Login */ = {
+		876BD98828EF45D5000CCBC8 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
 				875A662D28EEAE0A00368248 /* SignInViewController.swift */,
 				873586F828EEB9E40036624B /* SignUpViewController.swift */,
 				873586FA28EEB9EF0036624B /* WelcomeViewController.swift */,
 			);
-			path = Login;
+			path = Auth;
 			sourceTree = "<group>";
 		};
 		876BD98928EF46CC000CCBC8 /* Base */ = {
 			isa = PBXGroup;
 			children = (
 				876BD98A28EF4708000CCBC8 /* BaseViewController.swift */,
+				87C88AB328F53FA2004D9276 /* MainTabBarController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -184,6 +190,14 @@
 				876BD99028EF61DB000CCBC8 /* KakaoColor.swift */,
 			);
 			path = Color;
+			sourceTree = "<group>";
+		};
+		87C88AB028F53D17004D9276 /* Friend */ = {
+			isa = PBXGroup;
+			children = (
+				87C88AB128F53F09004D9276 /* FriendMainViewController.swift */,
+			);
+			path = Friend;
 			sourceTree = "<group>";
 		};
 		9AC91FD2E50CDE785D3C5D28 /* Pods */ = {
@@ -323,10 +337,12 @@
 				876BD98328EF2ABE000CCBC8 /* UIColor+.swift in Sources */,
 				876BD99128EF61DB000CCBC8 /* KakaoColor.swift in Sources */,
 				876BD97F28EF2520000CCBC8 /* UIView+.swift in Sources */,
+				87C88AB228F53F09004D9276 /* FriendMainViewController.swift in Sources */,
 				875A662E28EEAE0A00368248 /* SignInViewController.swift in Sources */,
 				873586FB28EEB9EF0036624B /* WelcomeViewController.swift in Sources */,
 				876BD98B28EF4708000CCBC8 /* BaseViewController.swift in Sources */,
 				875A662A28EEAE0A00368248 /* AppDelegate.swift in Sources */,
+				87C88AB428F53FA2004D9276 /* MainTabBarController.swift in Sources */,
 				873586F928EEB9E40036624B /* SignUpViewController.swift in Sources */,
 				875A662C28EEAE0A00368248 /* SceneDelegate.swift in Sources */,
 			);
