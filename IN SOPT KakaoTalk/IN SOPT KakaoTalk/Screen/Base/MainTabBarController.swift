@@ -48,8 +48,6 @@ class MainTabBarController: UITabBarController {
         myVC.tabBarItem = UITabBarItem(title: nil,
                                          image: UIImage(systemName: "ellipsis"),
                                          selectedImage: UIImage(systemName: "ellipsis"))
-        
-        
     }
     
     

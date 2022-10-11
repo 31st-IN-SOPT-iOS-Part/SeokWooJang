@@ -19,6 +19,15 @@ class FriendMainViewController : UIViewController{
         return label
     }()
     
+    private lazy var profileImageView : UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "my_profile")
+        imageView.contentMode = .scaleAspectFill
+        imageView.layer.cornerRadius = 25
+        imageView.layer.masksToBounds = true
+        return imageView
+    }()
+    
     //MARK: - Life Cycle
     
     override func viewDidLoad() {
@@ -36,14 +45,24 @@ class FriendMainViewController : UIViewController{
     
     private func setLayout(){
         view.addSubviews(
-                            friendTitleLabel
+                            friendTitleLabel,
+                            profileImageView
                         )
         
         friendTitleLabel.snp.makeConstraints {
             $0.top.equalTo(self.view.safeAreaLayoutGuide).offset(5)
-            $0.leading.equalTo(self.view.safeAreaLayoutGuide).offset(5)
+            $0.leading.equalTo(self.view.safeAreaLayoutGuide).offset(15)
+        }
+        
+        profileImageView.snp.makeConstraints {
+            $0.top.equalTo(friendTitleLabel.snp.bottom).offset(20)
+            $0.leading.equalToSuperview().inset(10)
+            $0.width.height.equalTo(70)
         }
         
     }
+    
+    //MARK: - Action Method
+  
     
 }
