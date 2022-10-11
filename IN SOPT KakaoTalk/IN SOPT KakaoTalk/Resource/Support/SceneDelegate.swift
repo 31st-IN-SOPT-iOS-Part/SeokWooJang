@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let rootVC = SignInViewController()
             let navigationController = UINavigationController(rootViewController: rootVC)
             let tabBarController = MainTabBarController()
-            window.rootViewController = tabBarController
+            window.rootViewController = navigationController
             window.makeKeyAndVisible()
             self.window = window
         }

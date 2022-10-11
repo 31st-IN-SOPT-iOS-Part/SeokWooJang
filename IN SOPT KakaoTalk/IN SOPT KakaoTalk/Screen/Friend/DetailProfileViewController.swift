@@ -81,6 +81,7 @@ class DetailProfileViewController : UIViewController{
         stackView.addArrangedSubViews(myChatStackView,editProfileStackView,kakaoStoryStackView)
         stackView.axis = .horizontal
         stackView.distribution = .fillEqually
+        stackView.isUserInteractionEnabled = true
         return stackView
     }()
     
@@ -93,6 +94,7 @@ class DetailProfileViewController : UIViewController{
         
         setUI()
         setLayout()
+        setGesture()
     }
     
     //MARK: - Custom Method
@@ -149,6 +151,16 @@ class DetailProfileViewController : UIViewController{
         
     }
     
+    private func setGesture(){
+        let myChatGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(stackViewTapped))
+        let editProfileGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(stackViewTapped))
+        let kakaoStoryGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(stackViewTapped))
+        
+        myChatStackView.addGestureRecognizer(myChatGestureRecognizer)
+        editProfileStackView.addGestureRecognizer(editProfileGestureRecognizer)
+        kakaoStoryStackView.addGestureRecognizer(kakaoStoryGestureRecognizer)
+    }
+    
     private func makeStackView(image: UIImage?, text: String) -> UIStackView{
         
         let imageView = UIImageView(image: image)
@@ -168,6 +180,7 @@ class DetailProfileViewController : UIViewController{
         stackView.axis = .vertical
         stackView.alignment = .center
         
+        stackView.isUserInteractionEnabled = true
         return stackView
     }
     
@@ -176,5 +189,9 @@ class DetailProfileViewController : UIViewController{
     
     @objc func dismissButtonPressed(){
         dismiss(animated: true)
+    }
+    
+    @objc func stackViewTapped(){
+        print("버튼이 눌렸씁니당~")
     }
 }
