@@ -48,10 +48,10 @@ class WelcomeViewController : UIViewController{
     }
     
     private func setLayout(){
-        view.addSubviews([
+        view.addSubviews(
                             welcomeLabel,
                             confirmButton
-                        ])
+                        )
         
         welcomeLabel.snp.makeConstraints {
             $0.centerX.equalToSuperview()

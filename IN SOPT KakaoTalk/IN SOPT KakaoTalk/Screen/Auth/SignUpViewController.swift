@@ -75,19 +75,18 @@ class SignUpViewController : UIViewController{
     }
     
     private func setUI(){
-        
         view.backgroundColor = .white
     }
     
     private func setLayout(){
         
-        view.addSubviews([
+        view.addSubviews(
                             welcomeLabel,
                             emailTextField,
                             passwordTextField,
                             confirmPasswordTextField,
                             signUpButton
-                        ])
+                        )
         
         welcomeLabel.snp.makeConstraints {
             $0.centerX.equalToSuperview()
@@ -131,6 +130,7 @@ class SignUpViewController : UIViewController{
         welcomeVC.modalPresentationStyle = .fullScreen
         present(welcomeVC, animated: true)
     }
+    
     
     //MARK: - @objc Method
     
