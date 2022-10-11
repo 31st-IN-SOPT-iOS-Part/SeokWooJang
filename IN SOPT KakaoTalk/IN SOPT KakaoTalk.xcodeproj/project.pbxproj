@@ -28,7 +28,7 @@
 		87C88ABB28F5EADE004D9276 /* ViewMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C88ABA28F5EADE004D9276 /* ViewMainViewController.swift */; };
 		87C88ABD28F5EAE8004D9276 /* MyMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C88ABC28F5EAE8004D9276 /* MyMainViewController.swift */; };
 		87C88AC028F5EC67004D9276 /* ShopMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C88ABF28F5EC67004D9276 /* ShopMainViewController.swift */; };
-		87C88AC228F60E3C004D9276 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C88AC128F60E3C004D9276 /* ProfileViewController.swift */; };
+		87C88AC228F60E3C004D9276 /* DetailProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C88AC128F60E3C004D9276 /* DetailProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,7 +57,7 @@
 		87C88ABA28F5EADE004D9276 /* ViewMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMainViewController.swift; sourceTree = "<group>"; };
 		87C88ABC28F5EAE8004D9276 /* MyMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMainViewController.swift; sourceTree = "<group>"; };
 		87C88ABF28F5EC67004D9276 /* ShopMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopMainViewController.swift; sourceTree = "<group>"; };
-		87C88AC128F60E3C004D9276 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		87C88AC128F60E3C004D9276 /* DetailProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,7 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				87C88AB128F53F09004D9276 /* FriendMainViewController.swift */,
-				87C88AC128F60E3C004D9276 /* ProfileViewController.swift */,
+				87C88AC128F60E3C004D9276 /* DetailProfileViewController.swift */,
 			);
 			path = Friend;
 			sourceTree = "<group>";
@@ -388,7 +388,7 @@
 				87C88AB228F53F09004D9276 /* FriendMainViewController.swift in Sources */,
 				875A662E28EEAE0A00368248 /* SignInViewController.swift in Sources */,
 				873586FB28EEB9EF0036624B /* WelcomeViewController.swift in Sources */,
-				87C88AC228F60E3C004D9276 /* ProfileViewController.swift in Sources */,
+				87C88AC228F60E3C004D9276 /* DetailProfileViewController.swift in Sources */,
 				876BD98B28EF4708000CCBC8 /* BaseViewController.swift in Sources */,
 				875A662A28EEAE0A00368248 /* AppDelegate.swift in Sources */,
 				87C88AB428F53FA2004D9276 /* MainTabBarController.swift in Sources */,

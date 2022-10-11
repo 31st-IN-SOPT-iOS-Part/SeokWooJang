@@ -25,6 +25,7 @@ class FriendMainViewController : UIViewController{
         imageView.contentMode = .scaleAspectFill
         imageView.layer.cornerRadius = 25
         imageView.layer.masksToBounds = true
+        imageView.isUserInteractionEnabled = true
         return imageView
     }()
     
@@ -35,6 +36,8 @@ class FriendMainViewController : UIViewController{
         
         setUI()
         setLayout()
+        setGesture()
+      
     }
     
     //MARK: - Custom Method
@@ -62,7 +65,16 @@ class FriendMainViewController : UIViewController{
         
     }
     
+    private func setGesture(){
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageViewTapped))
+        profileImageView.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
     //MARK: - Action Method
   
-    
+    @objc func imageViewTapped(){
+        let profileVC = DetailProfileViewController()
+        profileVC.modalPresentationStyle = .fullScreen
+        present(profileVC, animated: true)
+    }
 }
