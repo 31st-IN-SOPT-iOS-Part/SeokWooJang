@@ -33,7 +33,7 @@ class DetailProfileViewController : UIViewController{
         button.tintColor = .white
         button.alpha = 0.7
         button.contentMode = .scaleAspectFit
-        button.addTarget(self, action: #selector(dismissButtonPressed), for: .touchUpInside)
+        button.addTarget(DetailProfileViewController.self, action: #selector(dismissButtonPressed), for: .touchUpInside)
         return button
     }()
     
@@ -73,7 +73,7 @@ class DetailProfileViewController : UIViewController{
     
     private lazy var kakaoStoryStackView = makeStackView(
                                                      image: UIImage(systemName: "square.and.pencil"),
-                                                     text: "나와의 채팅"
+                                                     text: "카카오스토리"
                                                     )
     
     private lazy var totalStackView : UIStackView = {
@@ -81,11 +81,8 @@ class DetailProfileViewController : UIViewController{
         stackView.addArrangedSubViews(myChatStackView,editProfileStackView,kakaoStoryStackView)
         stackView.axis = .horizontal
         stackView.distribution = .fillEqually
-        stackView.isUserInteractionEnabled = true
         return stackView
     }()
-    
-    
     
     //MARK: - Life Cycle
     
@@ -107,7 +104,6 @@ class DetailProfileViewController : UIViewController{
         view.addSubview(backgroundImageView)
         backgroundImageView.addSubviews(alphaBlackView,dismissButton)
         backgroundImageView.addSubviews(totalStackView,lineView,profileImageView,nameLabel)
-        
         
         //MARK: 위에서부터 레이아웃 잡음
         backgroundImageView.snp.makeConstraints {
@@ -180,7 +176,6 @@ class DetailProfileViewController : UIViewController{
         stackView.axis = .vertical
         stackView.alignment = .center
         
-        stackView.isUserInteractionEnabled = true
         return stackView
     }
     
@@ -191,7 +186,7 @@ class DetailProfileViewController : UIViewController{
         dismiss(animated: true)
     }
     
-    @objc func stackViewTapped(){
-        print("버튼이 눌렸씁니당~")
+    @objc func stackViewTapped(_ sender: UITapGestureRecognizer){
+     print("버튼이 눌렸습니다")
     }
 }

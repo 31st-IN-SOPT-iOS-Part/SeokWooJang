@@ -8,24 +8,24 @@
 import UIKit
 
 class MainTabBarController: UITabBarController {
-
     
-    
-    let friendVC = FriendMainViewController()
+    let friendNVC = UINavigationController(rootViewController: FriendMainViewController())
     let chatVC = ChatMainViewController()
     let viewVC = ViewMainViewController()
     let shopVC = ShopMainViewController()
     let myVC = MyMainViewController()
     
- 
+    //MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setViewController()
         setTabBar()
-        viewControllers = [friendVC,chatVC,viewVC,shopVC,myVC]
+        viewControllers = [friendNVC,chatVC,viewVC,shopVC,myVC]
     }
+    
+    //MARK: - Custom Method
     
     private func setTabBar(){
         tabBar.backgroundColor = .white
@@ -33,7 +33,7 @@ class MainTabBarController: UITabBarController {
     }
     
     private func setViewController(){
-        friendVC.tabBarItem = UITabBarItem(title: nil,
+        friendNVC.tabBarItem = UITabBarItem(title: nil,
                                            image: UIImage(systemName: "person"),
                                            selectedImage: UIImage(systemName: "person.fill"))
         chatVC.tabBarItem = UITabBarItem(title: nil,

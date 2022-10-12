@@ -37,7 +37,6 @@ class FriendMainViewController : UIViewController{
         setUI()
         setLayout()
         setGesture()
-      
     }
     
     //MARK: - Custom Method
