@@ -187,6 +187,16 @@ class DetailProfileViewController : UIViewController{
     }
     
     @objc func stackViewTapped(_ sender: UITapGestureRecognizer){
-     print("버튼이 눌렸습니다")
+        guard let stackView = sender.view as? UIStackView else {
+            print("버튼이 눌렸습니다")
+            return
+        }
+        
+        guard let label = stackView.arrangedSubviews[1] as? UILabel else {
+            print("버튼이 눌렸습니다")
+            return
+        }
+        
+        print("\"\(label.text!)\" 버튼이 눌렸습니다.")
     }
 }
