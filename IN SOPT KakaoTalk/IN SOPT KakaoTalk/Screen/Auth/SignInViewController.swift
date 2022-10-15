@@ -75,14 +75,11 @@ class SignInViewController: UIViewController {
         setDelegate()
         setUI()
         setLayout()
-        
-        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        
-        resetTextField(emailTextField)
-        resetTextField(passwordTextField)
+        emailTextField.resetTextField()
+        passwordTextField.resetTextField()
         textFieldDidChange()
     }
     
@@ -98,15 +95,14 @@ class SignInViewController: UIViewController {
     }
     
     private func setLayout(){
-        
-        view.addSubviews([
+        view.addSubviews(
                             welcomeLabel,
                             descriptionLabel,
                             emailTextField,
                             passwordTextField,
                             signInButton,
                             signUpButton
-                        ])
+                        )
         
         welcomeLabel.snp.makeConstraints {
             $0.centerX.equalToSuperview()
@@ -139,11 +135,6 @@ class SignInViewController: UIViewController {
             $0.leading.trailing.equalToSuperview().inset(25)
             $0.height.equalTo(45)
         }
-        
-    }
-    
-    private func resetTextField(_ textfield: UITextField){
-        textfield.text = ""
     }
     
     private func goToWelcomeVC(){
@@ -160,15 +151,12 @@ class SignInViewController: UIViewController {
     
     //MARK: - Action Method
     
-    
     @objc private func signInButtonPressed() {
-   
         if emailTextField.isValid && passwordTextField.isValid {
             goToWelcomeVC()
         } else {
             print("이메일과 비밀번호를 제대로 입력바람 ㅋ")
         }
-   
     }
    
     @objc private func signUpButtonPressed() {
@@ -176,7 +164,6 @@ class SignInViewController: UIViewController {
     }
    
     @objc private func textFieldDidChange(){
-        
         if emailTextField.isValid && passwordTextField.isValid {
             signInButton.backgroundColor = .kakaoYellow
         } else {
@@ -191,13 +178,11 @@ class SignInViewController: UIViewController {
 extension SignInViewController : UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        
         guard let textField = textField as? AuthTextField else { return }
         textField.underLineView.backgroundColor = .black
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        
         guard let textField = textField as? AuthTextField else { return }
         textField.underLineView.backgroundColor = .systemGray4
     }

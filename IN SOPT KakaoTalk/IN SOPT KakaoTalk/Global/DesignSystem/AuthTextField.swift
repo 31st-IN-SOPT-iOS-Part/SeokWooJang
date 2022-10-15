@@ -58,4 +58,8 @@ extension AuthTextField {
             $0.height.equalTo(1)
         }
     }
+    
+    func resetTextField(){
+        self.text = ""
+    }
 }
