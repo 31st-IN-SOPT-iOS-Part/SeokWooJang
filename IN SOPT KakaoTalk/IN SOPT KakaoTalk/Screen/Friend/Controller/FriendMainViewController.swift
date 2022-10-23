@@ -55,7 +55,6 @@ class FriendMainViewController : UIViewController{
     
     override func viewWillAppear(_ animated: Bool) {
         setData()
-        print(myName)
     }
     
     //MARK: - Custom Method

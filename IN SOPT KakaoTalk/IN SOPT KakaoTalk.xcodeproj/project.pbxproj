@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		56F0DA850B1E012178737CE5 /* Pods_IN_SOPT_KakaoTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33B8DCEF672096ED9F97D51E /* Pods_IN_SOPT_KakaoTalk.framework */; };
 		8721A78A2905438700B8348D /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8721A7892905438700B8348D /* BaseNavigationController.swift */; };
+		8721A78D2905486400B8348D /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8721A78C2905486400B8348D /* Profile.swift */; };
+		8721A7912905491C00B8348D /* StateMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8721A7902905491C00B8348D /* StateMusic.swift */; };
 		873586F928EEB9E40036624B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873586F828EEB9E40036624B /* SignUpViewController.swift */; };
 		873586FB28EEB9EF0036624B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873586FA28EEB9EF0036624B /* WelcomeViewController.swift */; };
 		875A662A28EEAE0A00368248 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875A662928EEAE0A00368248 /* AppDelegate.swift */; };
@@ -37,6 +39,8 @@
 		3A326CB320716349E834A53A /* Pods-IN SOPT KakaoTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IN SOPT KakaoTalk.debug.xcconfig"; path = "Target Support Files/Pods-IN SOPT KakaoTalk/Pods-IN SOPT KakaoTalk.debug.xcconfig"; sourceTree = "<group>"; };
 		84402F3C72679121E0B9DA5F /* Pods-IN SOPT KakaoTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IN SOPT KakaoTalk.release.xcconfig"; path = "Target Support Files/Pods-IN SOPT KakaoTalk/Pods-IN SOPT KakaoTalk.release.xcconfig"; sourceTree = "<group>"; };
 		8721A7892905438700B8348D /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		8721A78C2905486400B8348D /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		8721A7902905491C00B8348D /* StateMusic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateMusic.swift; sourceTree = "<group>"; };
 		873586F828EEB9E40036624B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		873586FA28EEB9EF0036624B /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		875A662628EEAE0A00368248 /* IN SOPT KakaoTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IN SOPT KakaoTalk.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +120,15 @@
 		8721A7882905425300B8348D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8721A78E2905486C00B8348D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8721A78C2905486400B8348D /* Profile.swift */,
+				8721A7902905491C00B8348D /* StateMusic.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -301,6 +314,7 @@
 		87C88AC328F73BC8004D9276 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				8721A78E2905486C00B8348D /* Model */,
 				87C88AC128F60E3C004D9276 /* DetailProfileViewController.swift */,
 			);
 			path = Profile;
@@ -439,6 +453,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				876BD98128EF2A68000CCBC8 /* UIStackView+.swift in Sources */,
+				8721A78D2905486400B8348D /* Profile.swift in Sources */,
 				87C88AB928F5EACD004D9276 /* ChatMainViewController.swift in Sources */,
 				876BD98E28EF510D000CCBC8 /* AuthTextField.swift in Sources */,
 				876BD98328EF2ABE000CCBC8 /* UIColor+.swift in Sources */,
@@ -449,6 +464,7 @@
 				875A662E28EEAE0A00368248 /* SignInViewController.swift in Sources */,
 				873586FB28EEB9EF0036624B /* WelcomeViewController.swift in Sources */,
 				87C88AC228F60E3C004D9276 /* DetailProfileViewController.swift in Sources */,
+				8721A7912905491C00B8348D /* StateMusic.swift in Sources */,
 				876BD98B28EF4708000CCBC8 /* BaseViewController.swift in Sources */,
 				875A662A28EEAE0A00368248 /* AppDelegate.swift in Sources */,
 				87C88AB428F53FA2004D9276 /* MainTabBarController.swift in Sources */,
