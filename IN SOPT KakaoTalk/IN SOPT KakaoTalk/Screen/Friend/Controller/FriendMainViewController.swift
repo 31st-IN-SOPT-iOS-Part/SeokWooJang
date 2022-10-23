@@ -12,20 +12,30 @@ class FriendMainViewController : BaseViewController{
     
     //MARK: - Properties
     
+    enum sections : String, CaseIterable{
+        case me = ""
+        case birth = "생일인 친구"
+        case update = "업데이트한 친구"
+        case friend = "친구"
+    }
+    
     var myName : String? {
         didSet{
             profileNameLabel.text = myName
         }
     }
     
-    var friendData : Friends = Friends(friendProfile: nil)
+    var myData : Profile?
+    var birthFriendData : [Profile]?
+    var friendData : [Profile]?
     
     //MARK: - UI Components
     
     private let friendTableView : UITableView = {
-        let tableView = UITableView()
+        let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.separatorStyle = .none
         tableView.translatesAutoresizingMaskIntoConstraints = false
+
         return tableView
     }()
     
@@ -36,10 +46,10 @@ class FriendMainViewController : BaseViewController{
         return label
     }()
     
-    private let errorBanner : UIImageView = {
-        let imgView = UIImageView(frame: CGRect(x: 0, y: 0, width: 0, height: 80))
+    let errorBanner : UIImageView = {
+        let imgView = UIImageView()
         imgView.image = UIImage(named: Image.errorApply)
-        imgView.contentMode = .scaleAspectFit
+        imgView.contentMode = .scaleAspectFill
         imgView.layer.cornerRadius = 5
         return imgView
     }()
@@ -69,7 +79,6 @@ class FriendMainViewController : BaseViewController{
         setDelegate()
         setUI()
         setLayout()
-        setGesture()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -82,6 +91,7 @@ class FriendMainViewController : BaseViewController{
         friendTableView.delegate = self
         friendTableView.dataSource = self
         friendTableView.register(FriendTableViewCell.self, forCellReuseIdentifier: "friend")
+        
     }
     
     private func setUI(){
@@ -91,13 +101,11 @@ class FriendMainViewController : BaseViewController{
     private func setLayout(){
         
         navigationView.addSubview(friendTitleLabel)
-        friendTableView.tableHeaderView = errorBanner
+        //friendTableView.tableHeaderView = errorBanner
         
         view.addSubviews(
                             friendTableView
                         )
-        
-        
         
         friendTitleLabel.snp.makeConstraints {
             $0.top.equalToSuperview().offset(5)
@@ -110,52 +118,14 @@ class FriendMainViewController : BaseViewController{
             $0.bottom.equalToSuperview()
         }
         
-        
-        
-    }
-    
-    private func setGesture(){
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageViewTapped))
-        profileImageView.addGestureRecognizer(tapGestureRecognizer)
     }
     
     private func setData(){
         myName = UserDefaults.standard.string(forKey: "myName")
-        friendData = Friends.sampleData
+        myData = Profile.myProfile
+        birthFriendData = Friend.birthData
+        birthFriendData?.append(Profile.birthProfile)
+        friendData = Friend.friendData
     }
-    //MARK: - Action Method
-  
-    @objc func imageViewTapped(){
-        let profileVC = DetailProfileViewController()
-        profileVC.modalPresentationStyle = .fullScreen
-        present(profileVC, animated: true)
-    }
-}
-
-//MARK: - Extension: TableViewDelegate
-
-extension FriendMainViewController : UITableViewDelegate, UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        80
-        
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        70
-    }
-    
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return friendData.friendCount
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "friend", for: indexPath) as? FriendTableViewCell else { return UITableViewCell() }
-        
-        cell.dataBind((friendData.friendProfile![indexPath.row]))
-        return cell
-    }
-    
     
 }

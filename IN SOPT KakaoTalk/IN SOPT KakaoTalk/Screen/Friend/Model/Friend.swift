@@ -7,97 +7,31 @@
 
 import UIKit
 
-struct Friends {
-    var friendProfile : [Profile]?
-    var friendCount : Int = 0
+struct Friend {
     
-    init(friendProfile: [Profile]?) {
-        self.friendProfile = friendProfile
-        self.friendCount = friendProfile?.count ?? 0
-        
-    }
+    static let birthData = [
+                            Profile.hamburgerProfile,
+                            Profile.gildongProfile,
+                            ]
     
-    static let sampleData : Friends =
-    Friends(friendProfile: [
-                                Profile(name: "장석우",
-                                        profileImage: UIImage(named: Image.myProfile),
-                                        backgroundImage: nil,
-                                        stateMessage: "나는야 강서구",
-                                        stateMusic: StateMusic(signer: "PL", title: "pillow"),
-                                        birthDay: nil),
-                                Profile(name: "햄버거",
-                                        profileImage: UIImage(named: Image.defaultProfile),
-                                        backgroundImage: nil,
-                                        stateMessage: "나는야 햄버거",
-                                        stateMusic: StateMusic(signer: "PL", title: "pillow"),
-                                        birthDay: nil),
-                                
-                                Profile(name: "장석우",
-                                        profileImage: UIImage(named: Image.myProfile),
-                                        backgroundImage: nil,
-                                        stateMessage: "나는야 강서구",
-                                        stateMusic: StateMusic(signer: "PL", title: "pillow"),
-                                        birthDay: nil),
-                                Profile(name: "햄버거",
-                                        profileImage: UIImage(named: Image.defaultProfile),
-                                        backgroundImage: nil,
-                                        stateMessage: "나는야 햄버거",
-                                        stateMusic: StateMusic(signer: "PL", title: "pillow"),
-                                        birthDay: nil),
-                                
-                                Profile(name: "장석우",
-                                        profileImage: UIImage(named: Image.myProfile),
-                                        backgroundImage: nil,
-                                        stateMessage: "나는야 강서구",
-                                        stateMusic: StateMusic(signer: "PL", title: "pillow"),
-                                        birthDay: nil),
-                                Profile(name: "햄버거",
-                                        profileImage: UIImage(named: Image.defaultProfile),
-                                        backgroundImage: nil,
-                                        stateMessage: "나는야 햄버거",
-                                        stateMusic: StateMusic(signer: "PL", title: "pillow"),
-                                        birthDay: nil),
-                                
-                                Profile(name: "장석우",
-                                        profileImage: UIImage(named: Image.myProfile),
-                                        backgroundImage: nil,
-                                        stateMessage: "나는야 강서구",
-                                        stateMusic: StateMusic(signer: "PL", title: "pillow"),
-                                        birthDay: nil),
-                                Profile(name: "햄버거",
-                                        profileImage: UIImage(named: Image.defaultProfile),
-                                        backgroundImage: nil,
-                                        stateMessage: "나는야 햄버거",
-                                        stateMusic: StateMusic(signer: "PL", title: "pillow"),
-                                        birthDay: nil),
-                                
-                                Profile(name: "장석우",
-                                        profileImage: UIImage(named: Image.myProfile),
-                                        backgroundImage: nil,
-                                        stateMessage: "나는야 강서구",
-                                        stateMusic: StateMusic(signer: "PL", title: "pillow"),
-                                        birthDay: nil),
-                                Profile(name: "장석우",
-                                        profileImage: UIImage(named: Image.myProfile),
-                                        backgroundImage: nil,
-                                        stateMessage: "나는야 강서구",
-                                        stateMusic: StateMusic(signer: "PL", title: "pillow"),
-                                        birthDay: nil),
-                                Profile(name: "장석우",
-                                        profileImage: UIImage(named: Image.myProfile),
-                                        backgroundImage: nil,
-                                        stateMessage: "나는야 강서구",
-                                        stateMusic: StateMusic(signer: "PL", title: "pillow"),
-                                        birthDay: nil),
-                                Profile(name: "장석우",
-                                        profileImage: UIImage(named: Image.myProfile),
-                                        backgroundImage: nil,
-                                        stateMessage: "나는야 강서구",
-                                        stateMusic: StateMusic(signer: "PL", title: "pillow"),
-                                        birthDay: nil),
-                                
-                                
-    ])
+    static let friendData = [
+                                Profile.myProfile,
+                                Profile.hamburgerProfile,
+                                Profile.gildongProfile,
+                                Profile.hamburgerProfile,
+                                Profile.myProfile,
+                                Profile.gildongProfile,
+                                Profile.myProfile,
+                                Profile.hamburgerProfile,
+                                Profile.gildongProfile,
+                                Profile.hamburgerProfile,
+                                Profile.gildongProfile,
+                                Profile.gildongProfile,
+                                Profile.myProfile,
+                                Profile.hamburgerProfile,
+                                Profile.myProfile,
+                                Profile.hamburgerProfile,
+                            ]
     
 }
 
