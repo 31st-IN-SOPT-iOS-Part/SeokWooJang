@@ -20,9 +20,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             window.overrideUserInterfaceStyle = UIUserInterfaceStyle.light
             
             let navigationController = UINavigationController(rootViewController: SignInViewController())
-            //let tabBarController = MainTabBarController()
+            let tabBarController = MainTabBarController()
             
-            window.rootViewController = navigationController
+            window.rootViewController = tabBarController
             window.makeKeyAndVisible()
             self.window = window
         }

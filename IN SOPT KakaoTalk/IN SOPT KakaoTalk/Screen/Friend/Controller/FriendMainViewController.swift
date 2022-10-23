@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class FriendMainViewController : UIViewController{
+class FriendMainViewController : BaseViewController{
     
     //MARK: - Properties
     
@@ -18,11 +18,30 @@ class FriendMainViewController : UIViewController{
         }
     }
     
+    var friendData : Friends = Friends(friendProfile: nil)
+    
+    //MARK: - UI Components
+    
+    private let friendTableView : UITableView = {
+        let tableView = UITableView()
+        tableView.separatorStyle = .none
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        return tableView
+    }()
+    
     private let friendTitleLabel : UILabel = {
         let label = UILabel()
         label.text = "친구"
         label.font = .systemFont(ofSize: 25, weight: .semibold)
         return label
+    }()
+    
+    private let errorBanner : UIImageView = {
+        let imgView = UIImageView(frame: CGRect(x: 0, y: 0, width: 0, height: 80))
+        imgView.image = UIImage(named: Image.errorApply)
+        imgView.contentMode = .scaleAspectFit
+        imgView.layer.cornerRadius = 5
+        return imgView
     }()
     
     private let profileNameLabel : UILabel = {
@@ -47,10 +66,10 @@ class FriendMainViewController : UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setDelegate()
         setUI()
         setLayout()
         setGesture()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -59,32 +78,39 @@ class FriendMainViewController : UIViewController{
     
     //MARK: - Custom Method
     
+    private func setDelegate(){
+        friendTableView.delegate = self
+        friendTableView.dataSource = self
+        friendTableView.register(FriendTableViewCell.self, forCellReuseIdentifier: "friend")
+    }
+    
     private func setUI(){
         view.backgroundColor = .white
     }
     
     private func setLayout(){
+        
+        navigationView.addSubview(friendTitleLabel)
+        friendTableView.tableHeaderView = errorBanner
+        
         view.addSubviews(
-                            friendTitleLabel,
-                            profileImageView,
-                            profileNameLabel
+                            friendTableView
                         )
         
+        
+        
         friendTitleLabel.snp.makeConstraints {
-            $0.top.equalTo(self.view.safeAreaLayoutGuide).offset(5)
-            $0.leading.equalTo(self.view.safeAreaLayoutGuide).offset(15)
+            $0.top.equalToSuperview().offset(5)
+            $0.leading.equalToSuperview().offset(15)
         }
         
-        profileImageView.snp.makeConstraints {
-            $0.top.equalTo(friendTitleLabel.snp.bottom).offset(20)
-            $0.leading.equalToSuperview().inset(10)
-            $0.width.height.equalTo(70)
+        friendTableView.snp.makeConstraints {
+            $0.top.equalTo(navigationView.snp.bottom)
+            $0.leading.trailing.equalToSuperview().inset(10)
+            $0.bottom.equalToSuperview()
         }
         
-        profileNameLabel.snp.makeConstraints {
-            $0.centerY.equalTo(profileImageView)
-            $0.leading.equalTo(profileImageView.snp.trailing).offset(20)
-        }
+        
         
     }
     
@@ -95,6 +121,7 @@ class FriendMainViewController : UIViewController{
     
     private func setData(){
         myName = UserDefaults.standard.string(forKey: "myName")
+        friendData = Friends.sampleData
     }
     //MARK: - Action Method
   
@@ -103,4 +130,32 @@ class FriendMainViewController : UIViewController{
         profileVC.modalPresentationStyle = .fullScreen
         present(profileVC, animated: true)
     }
+}
+
+//MARK: - Extension: TableViewDelegate
+
+extension FriendMainViewController : UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        80
+        
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        70
+    }
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return friendData.friendCount
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "friend", for: indexPath) as? FriendTableViewCell else { return UITableViewCell() }
+        
+        cell.dataBind((friendData.friendProfile![indexPath.row]))
+        return cell
+    }
+    
+    
 }

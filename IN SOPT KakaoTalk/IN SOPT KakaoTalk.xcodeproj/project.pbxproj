@@ -11,6 +11,9 @@
 		8721A78A2905438700B8348D /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8721A7892905438700B8348D /* BaseNavigationController.swift */; };
 		8721A78D2905486400B8348D /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8721A78C2905486400B8348D /* Profile.swift */; };
 		8721A7912905491C00B8348D /* StateMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8721A7902905491C00B8348D /* StateMusic.swift */; };
+		8721A79429054B0500B8348D /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8721A79329054B0500B8348D /* Image.swift */; };
+		8721A79629054EC300B8348D /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8721A79529054EC300B8348D /* Friend.swift */; };
+		8721A798290556C200B8348D /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8721A797290556C200B8348D /* FriendTableViewCell.swift */; };
 		873586F928EEB9E40036624B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873586F828EEB9E40036624B /* SignUpViewController.swift */; };
 		873586FB28EEB9EF0036624B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873586FA28EEB9EF0036624B /* WelcomeViewController.swift */; };
 		875A662A28EEAE0A00368248 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875A662928EEAE0A00368248 /* AppDelegate.swift */; };
@@ -41,6 +44,9 @@
 		8721A7892905438700B8348D /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		8721A78C2905486400B8348D /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		8721A7902905491C00B8348D /* StateMusic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateMusic.swift; sourceTree = "<group>"; };
+		8721A79329054B0500B8348D /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		8721A79529054EC300B8348D /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		8721A797290556C200B8348D /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
 		873586F828EEB9E40036624B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		873586FA28EEB9EF0036624B /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		875A662628EEAE0A00368248 /* IN SOPT KakaoTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IN SOPT KakaoTalk.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +119,7 @@
 		8721A7872905424E00B8348D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8721A797290556C200B8348D /* FriendTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -120,6 +127,7 @@
 		8721A7882905425300B8348D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8721A79529054EC300B8348D /* Friend.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -131,6 +139,14 @@
 				8721A7902905491C00B8348D /* StateMusic.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8721A79229054AF300B8348D /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				8721A79329054B0500B8348D /* Image.swift */,
+			);
+			path = Constant;
 			sourceTree = "<group>";
 		};
 		875A661D28EEAE0A00368248 = {
@@ -201,6 +217,7 @@
 		876BD98428EF4511000CCBC8 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				8721A79229054AF300B8348D /* Constant */,
 				876BD98C28EF5101000CCBC8 /* DesignSystem */,
 				876BD97D28EF250C000CCBC8 /* Extension */,
 			);
@@ -461,15 +478,18 @@
 				876BD97F28EF2520000CCBC8 /* UIView+.swift in Sources */,
 				8721A78A2905438700B8348D /* BaseNavigationController.swift in Sources */,
 				87C88AB228F53F09004D9276 /* FriendMainViewController.swift in Sources */,
+				8721A79429054B0500B8348D /* Image.swift in Sources */,
 				875A662E28EEAE0A00368248 /* SignInViewController.swift in Sources */,
 				873586FB28EEB9EF0036624B /* WelcomeViewController.swift in Sources */,
 				87C88AC228F60E3C004D9276 /* DetailProfileViewController.swift in Sources */,
 				8721A7912905491C00B8348D /* StateMusic.swift in Sources */,
 				876BD98B28EF4708000CCBC8 /* BaseViewController.swift in Sources */,
+				8721A798290556C200B8348D /* FriendTableViewCell.swift in Sources */,
 				875A662A28EEAE0A00368248 /* AppDelegate.swift in Sources */,
 				87C88AB428F53FA2004D9276 /* MainTabBarController.swift in Sources */,
 				873586F928EEB9E40036624B /* SignUpViewController.swift in Sources */,
 				875A662C28EEAE0A00368248 /* SceneDelegate.swift in Sources */,
+				8721A79629054EC300B8348D /* Friend.swift in Sources */,
 				87C88AC028F5EC67004D9276 /* ShopMainViewController.swift in Sources */,
 				87C88ABB28F5EADE004D9276 /* ViewMainViewController.swift in Sources */,
 				87C88ABD28F5EAE8004D9276 /* MyMainViewController.swift in Sources */,

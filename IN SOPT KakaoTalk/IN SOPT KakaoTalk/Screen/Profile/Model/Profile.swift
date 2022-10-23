@@ -14,7 +14,6 @@ struct Profile {
     let backgroundImage : UIImage?
     let stateMessage : String?
     let stateMusic : StateMusic?
-    let birthDay : Date
-    
+    let birthDay : Date?
 }
 
