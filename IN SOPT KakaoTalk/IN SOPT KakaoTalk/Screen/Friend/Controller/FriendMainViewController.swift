@@ -12,10 +12,23 @@ class FriendMainViewController : UIViewController{
     
     //MARK: - Properties
     
+    var myName : String? {
+        didSet{
+            profileNameLabel.text = myName
+        }
+    }
+    
     private let friendTitleLabel : UILabel = {
         let label = UILabel()
         label.text = "친구"
         label.font = .systemFont(ofSize: 25, weight: .semibold)
+        return label
+    }()
+    
+    private let profileNameLabel : UILabel = {
+        let label = UILabel()
+        label.textColor = .black
+        label.font = .systemFont(ofSize: 20, weight: .medium)
         return label
     }()
     
@@ -37,6 +50,12 @@ class FriendMainViewController : UIViewController{
         setUI()
         setLayout()
         setGesture()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setData()
+        print(myName)
     }
     
     //MARK: - Custom Method
@@ -48,7 +67,8 @@ class FriendMainViewController : UIViewController{
     private func setLayout(){
         view.addSubviews(
                             friendTitleLabel,
-                            profileImageView
+                            profileImageView,
+                            profileNameLabel
                         )
         
         friendTitleLabel.snp.makeConstraints {
@@ -62,6 +82,11 @@ class FriendMainViewController : UIViewController{
             $0.width.height.equalTo(70)
         }
         
+        profileNameLabel.snp.makeConstraints {
+            $0.centerY.equalTo(profileImageView)
+            $0.leading.equalTo(profileImageView.snp.trailing).offset(20)
+        }
+        
     }
     
     private func setGesture(){
@@ -69,6 +94,9 @@ class FriendMainViewController : UIViewController{
         profileImageView.addGestureRecognizer(tapGestureRecognizer)
     }
     
+    private func setData(){
+        myName = UserDefaults.standard.string(forKey: "myName")
+    }
     //MARK: - Action Method
   
     @objc func imageViewTapped(){

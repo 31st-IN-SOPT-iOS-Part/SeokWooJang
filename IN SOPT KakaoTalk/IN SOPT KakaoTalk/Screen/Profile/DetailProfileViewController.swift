@@ -27,13 +27,13 @@ class DetailProfileViewController : UIViewController{
         return view
     }()
     
-    private let dismissButton : UIButton = {
+    private lazy var dismissButton : UIButton = {
         let button = UIButton()
         button.setBackgroundImage(UIImage(systemName: "xmark"), for: .normal)
         button.tintColor = .white
         button.alpha = 0.7
         button.contentMode = .scaleAspectFit
-        button.addTarget(DetailProfileViewController.self, action: #selector(dismissButtonPressed), for: .touchUpInside)
+        button.addTarget(self, action: #selector(dismissButtonPressed), for: .touchUpInside)
         return button
     }()
     

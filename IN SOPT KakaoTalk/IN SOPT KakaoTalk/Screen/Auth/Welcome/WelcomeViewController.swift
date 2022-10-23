@@ -12,6 +12,12 @@ class WelcomeViewController : UIViewController{
     
     //MARK: - Properties
     
+    var email : String? {
+        didSet{
+            welcomeLabel.text = email
+        }
+    }
+    
     private let welcomeLabel : UILabel = {
         let label = UILabel()
         label.text = "000님\n환영합니다"
@@ -21,7 +27,7 @@ class WelcomeViewController : UIViewController{
         return label
     }()
     
-    private let confirmButton : UIButton = {
+    private lazy var confirmButton : UIButton = {
         let button = UIButton()
         button.backgroundColor = .kakaoYellow
         button.setTitle("확인", for: .normal)
@@ -66,7 +72,7 @@ class WelcomeViewController : UIViewController{
     }
     
     func dataBind(email: String){
-        welcomeLabel.text = "\(email)님\n환영합니다"
+        self.email = email
     }
     
     private func goToSignInVC(){
@@ -85,6 +91,8 @@ class WelcomeViewController : UIViewController{
     
     @objc private func confirmButtonPressed(){
         //goToSignInVC()
+        UserDefaults.standard.set(email, forKey: "myName")
+        print(email)
         goToMainTabBarController()
     }
     

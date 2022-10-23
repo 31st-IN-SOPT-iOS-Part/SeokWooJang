@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		56F0DA850B1E012178737CE5 /* Pods_IN_SOPT_KakaoTalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33B8DCEF672096ED9F97D51E /* Pods_IN_SOPT_KakaoTalk.framework */; };
+		8721A78A2905438700B8348D /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8721A7892905438700B8348D /* BaseNavigationController.swift */; };
 		873586F928EEB9E40036624B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873586F828EEB9E40036624B /* SignUpViewController.swift */; };
 		873586FB28EEB9EF0036624B /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873586FA28EEB9EF0036624B /* WelcomeViewController.swift */; };
 		875A662A28EEAE0A00368248 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875A662928EEAE0A00368248 /* AppDelegate.swift */; };
@@ -35,6 +36,7 @@
 		33B8DCEF672096ED9F97D51E /* Pods_IN_SOPT_KakaoTalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IN_SOPT_KakaoTalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A326CB320716349E834A53A /* Pods-IN SOPT KakaoTalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IN SOPT KakaoTalk.debug.xcconfig"; path = "Target Support Files/Pods-IN SOPT KakaoTalk/Pods-IN SOPT KakaoTalk.debug.xcconfig"; sourceTree = "<group>"; };
 		84402F3C72679121E0B9DA5F /* Pods-IN SOPT KakaoTalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IN SOPT KakaoTalk.release.xcconfig"; path = "Target Support Files/Pods-IN SOPT KakaoTalk/Pods-IN SOPT KakaoTalk.release.xcconfig"; sourceTree = "<group>"; };
+		8721A7892905438700B8348D /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		873586F828EEB9E40036624B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		873586FA28EEB9EF0036624B /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		875A662628EEAE0A00368248 /* IN SOPT KakaoTalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IN SOPT KakaoTalk.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +74,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8721A781290541F900B8348D /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				875A662D28EEAE0A00368248 /* SignInViewController.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		8721A7832905421200B8348D /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				873586F828EEB9E40036624B /* SignUpViewController.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		8721A7842905421D00B8348D /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				873586FA28EEB9EF0036624B /* WelcomeViewController.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		8721A7862905424700B8348D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				87C88AB128F53F09004D9276 /* FriendMainViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8721A7872905424E00B8348D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8721A7882905425300B8348D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		875A661D28EEAE0A00368248 = {
 			isa = PBXGroup;
 			children = (
@@ -175,9 +223,9 @@
 		876BD98828EF45D5000CCBC8 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				875A662D28EEAE0A00368248 /* SignInViewController.swift */,
-				873586F828EEB9E40036624B /* SignUpViewController.swift */,
-				873586FA28EEB9EF0036624B /* WelcomeViewController.swift */,
+				8721A781290541F900B8348D /* SignIn */,
+				8721A7832905421200B8348D /* SignUp */,
+				8721A7842905421D00B8348D /* Welcome */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -186,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				876BD98A28EF4708000CCBC8 /* BaseViewController.swift */,
+				8721A7892905438700B8348D /* BaseNavigationController.swift */,
 				87C88AB328F53FA2004D9276 /* MainTabBarController.swift */,
 			);
 			path = Base;
@@ -210,7 +259,9 @@
 		87C88AB028F53D17004D9276 /* Friend */ = {
 			isa = PBXGroup;
 			children = (
-				87C88AB128F53F09004D9276 /* FriendMainViewController.swift */,
+				8721A7882905425300B8348D /* Model */,
+				8721A7872905424E00B8348D /* View */,
+				8721A7862905424700B8348D /* Controller */,
 			);
 			path = Friend;
 			sourceTree = "<group>";
@@ -393,6 +444,7 @@
 				876BD98328EF2ABE000CCBC8 /* UIColor+.swift in Sources */,
 				876BD99128EF61DB000CCBC8 /* KakaoColor.swift in Sources */,
 				876BD97F28EF2520000CCBC8 /* UIView+.swift in Sources */,
+				8721A78A2905438700B8348D /* BaseNavigationController.swift in Sources */,
 				87C88AB228F53F09004D9276 /* FriendMainViewController.swift in Sources */,
 				875A662E28EEAE0A00368248 /* SignInViewController.swift in Sources */,
 				873586FB28EEB9EF0036624B /* WelcomeViewController.swift in Sources */,
