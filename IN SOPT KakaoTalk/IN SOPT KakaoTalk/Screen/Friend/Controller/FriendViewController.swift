@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class FriendMainViewController : BaseViewController{
+class FriendViewController : BaseViewController{
     
     //MARK: - Properties
     
@@ -35,7 +35,6 @@ class FriendMainViewController : BaseViewController{
         let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.separatorStyle = .none
         tableView.translatesAutoresizingMaskIntoConstraints = false
-
         return tableView
     }()
     
@@ -49,7 +48,7 @@ class FriendMainViewController : BaseViewController{
     let errorBanner : UIImageView = {
         let imgView = UIImageView()
         imgView.image = UIImage(named: Image.errorApply)
-        imgView.contentMode = .scaleAspectFill
+        imgView.contentMode = .scaleAspectFit
         imgView.layer.cornerRadius = 5
         return imgView
     }()
@@ -90,7 +89,11 @@ class FriendMainViewController : BaseViewController{
     private func setDelegate(){
         friendTableView.delegate = self
         friendTableView.dataSource = self
-        friendTableView.register(FriendTableViewCell.self, forCellReuseIdentifier: "friend")
+        
+        friendTableView.register(
+            FriendTableViewCell.self,
+            forCellReuseIdentifier: FriendTableViewCell.cellIdentifier
+        )
         
     }
     
@@ -101,11 +104,8 @@ class FriendMainViewController : BaseViewController{
     private func setLayout(){
         
         navigationView.addSubview(friendTitleLabel)
-        //friendTableView.tableHeaderView = errorBanner
         
-        view.addSubviews(
-                            friendTableView
-                        )
+        view.addSubview( friendTableView )
         
         friendTitleLabel.snp.makeConstraints {
             $0.top.equalToSuperview().offset(5)

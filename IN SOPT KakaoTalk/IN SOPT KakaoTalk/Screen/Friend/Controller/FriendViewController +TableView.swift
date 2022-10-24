@@ -10,7 +10,7 @@ import SnapKit
 
 //MARK: - Extension: TableView
 
-extension FriendMainViewController : UITableViewDelegate, UITableViewDataSource {
+extension FriendViewController : UITableViewDelegate, UITableViewDataSource {
 
     //MARK: - Section
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -67,7 +67,7 @@ extension FriendMainViewController : UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "friend", for: indexPath) as? FriendTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: FriendTableViewCell.cellIdentifier, for: indexPath) as? FriendTableViewCell else { return UITableViewCell() }
         //TODO: tableview cell 속 collectionView 넣어야함 ;;
         let collectionCell = UITableViewCell()
         

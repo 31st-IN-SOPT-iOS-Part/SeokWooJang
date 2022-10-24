@@ -9,8 +9,8 @@ import UIKit
 
 class MainTabBarController: UITabBarController {
     
-    let friendNVC = BaseNavigationController(rootViewController: FriendMainViewController())
-    let chatVC = BaseNavigationController(rootViewController: ChatMainViewController())
+    let friendNVC = BaseNavigationController(rootViewController: FriendViewController())
+    let chatVC = BaseNavigationController(rootViewController: ChatViewController())
     let viewVC = BaseNavigationController(rootViewController: ViewMainViewController())
     let shopVC = BaseNavigationController(rootViewController: ShopMainViewController())
     let myVC = BaseNavigationController(rootViewController: MyMainViewController())
