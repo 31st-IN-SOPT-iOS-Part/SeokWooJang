@@ -11,11 +11,7 @@ import SnapKit
 class FriendHeaderView : UIView {
     
     //MARK: - Properties
-    var title : String? {
-        didSet{
-            titleLabel.text = title
-        }
-    }
+    var title : String?
     
     //MARK: - UI Components
     

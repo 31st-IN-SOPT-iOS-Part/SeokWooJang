@@ -31,15 +31,7 @@ class ChatCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
     }
-//
-//    override init(style: UICollectionViewCell.CellStyle, reuseIdentifier: String?) {
-//        super.init(style: style, reuseIdentifier: reuseIdentifier)
-//
-//        selectionStyle = .none
-//        setLayout()
-//    }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -47,7 +39,14 @@ class ChatCollectionViewCell: UICollectionViewCell {
     
     //MARK: - Custom Method
     
-    private func setLayout(){
+    
+    func dataBind(_ data: ChatModel?){
+        chatImageView.image = data?.profileImage
+        chatName = data?.name
+        recentMessage = data?.recentMessage
+    }
+    
+    func setLayout(){
         
         addSubviews(chatImageView,labelVStackView)
         
@@ -60,18 +59,10 @@ class ChatCollectionViewCell: UICollectionViewCell {
             $0.top.bottom.equalTo(chatImageView)
             $0.leading.equalTo(chatImageView.snp.trailing).offset(10)
             $0.trailing.equalToSuperview()
-                            
         }
         
     }
     
-    func dataBind(_ data: ChatModel?){
-        chatImageView.image = data?.profileImage
-        chatName = data?.name
-        recentMessage = data?.recentMessage
-        
-        setLayout()
-    }
     
     
 }

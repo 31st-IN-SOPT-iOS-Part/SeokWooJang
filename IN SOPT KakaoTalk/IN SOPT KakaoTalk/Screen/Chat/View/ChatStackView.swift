@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class ChatStackView : UIStackView{
+class ChatStackView: UIStackView{
     //MARK: - Properties
     private let topView = UIView()
     private let bottomView = UIView()
@@ -17,7 +17,6 @@ class ChatStackView : UIStackView{
         let label = UILabel()
         label.textColor = .black
         label.font = .systemFont(ofSize: 17, weight: .medium)
-        label.setContentHuggingPriority(UILayoutPriority(1), for: .vertical)
         return label
     }()
     
@@ -81,5 +80,6 @@ class ChatStackView : UIStackView{
             $0.top.equalToSuperview()
             $0.leading.equalToSuperview()
         }
+        
     }
 }

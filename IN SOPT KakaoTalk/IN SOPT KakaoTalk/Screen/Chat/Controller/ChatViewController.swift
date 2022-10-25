@@ -14,6 +14,8 @@ class ChatViewController : BaseViewController{
     
     var chatData : [ChatModel] = Sample.chatData
     
+    var headerImage = UIImage(named: Image.errorApply)
+    
     //MARK: - UI Components
     
     private let chatTitleLabel : UILabel = {
@@ -82,18 +84,18 @@ class ChatViewController : BaseViewController{
         
         settingButton.snp.makeConstraints {
             $0.centerY.equalToSuperview()
-            $0.trailing.equalToSuperview().offset(-15)
+            $0.trailing.equalToSuperview().offset(-20)
             $0.height.width.equalTo(25)
         }
         
         plusButton.snp.makeConstraints {
             $0.centerY.equalToSuperview()
-            $0.trailing.equalTo(settingButton.snp.leading).offset(-10)
+            $0.trailing.equalTo(settingButton.snp.leading).offset(-15)
             $0.height.width.equalTo(25)
         }
         
         chatCollectionView.snp.makeConstraints {
-            $0.top.equalTo(navigationView.snp.bottom)
+            $0.top.equalTo(navigationView.snp.bottom).offset(10)
             $0.leading.trailing.equalToSuperview().inset(15)
             $0.bottom.equalToSuperview()
         }
@@ -107,6 +109,8 @@ class ChatViewController : BaseViewController{
             ChatCollectionViewCell.self,
             forCellWithReuseIdentifier: ChatCollectionViewCell.cellIdentifier
         )
+        chatCollectionView.register(ChatHeaderCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: ChatHeaderCollectionReusableView.viewIdentifier)
+        
         
     }
     

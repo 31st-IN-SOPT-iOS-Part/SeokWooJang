@@ -13,7 +13,6 @@ struct ChatModel{
     let recentMessageTime : String
     let numbersOfNotReadMessage : Int
     
-    
 }
 extension ChatModel{
     static let chatModel = ["asdf"]
