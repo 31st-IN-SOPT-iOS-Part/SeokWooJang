@@ -12,8 +12,7 @@ class ChatViewController : BaseViewController{
     
     //MARK: - Properties
     
-    var chatData : [ChatModel] = Sample.chatData
-    
+    var chatData = Sample.chatData     //[ChatModel]
     var headerImage = UIImage(named: Image.errorApply)
     
     //MARK: - UI Components
@@ -117,7 +116,9 @@ class ChatViewController : BaseViewController{
     //MARK: - Action Method
 
     @objc private func plusButtonTapped(){
-        print("플러스 버튼이 눌렸습니당")
+        let galleryVC = GalleryViewController()
+        galleryVC.modalPresentationStyle = .fullScreen
+        present(galleryVC, animated: true)
     }
     
 }

@@ -24,6 +24,7 @@ class MainTabBarController: UITabBarController {
         setTabBar()
         
         viewControllers = [friendNVC,chatVC,viewVC,shopVC,myVC]
+        selectedIndex = 1
     }
     
     //MARK: - Custom Method

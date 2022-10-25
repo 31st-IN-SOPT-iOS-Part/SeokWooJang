@@ -36,6 +36,10 @@
 		8775FA3F29072B99000E08D5 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8775FA3E29072B99000E08D5 /* Device.swift */; };
 		8775FA412907E5D4000E08D5 /* ChatHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8775FA402907E5D4000E08D5 /* ChatHeaderCollectionReusableView.swift */; };
 		8775FA432907F0DA000E08D5 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8775FA422907F0DA000E08D5 /* UIImage+.swift */; };
+		8775FA4A2907F889000E08D5 /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8775FA492907F889000E08D5 /* GalleryViewController.swift */; };
+		8775FA4C2907FE86000E08D5 /* GalleryViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8775FA4B2907FE86000E08D5 /* GalleryViewController+CollectionView.swift */; };
+		8775FA4E2907FEED000E08D5 /* Sample_Gallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8775FA4D2907FEED000E08D5 /* Sample_Gallery.swift */; };
+		8775FA502907FF71000E08D5 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8775FA4F2907FF71000E08D5 /* GalleryCollectionViewCell.swift */; };
 		87822FBB290715050067580A /* UITableViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87822FBA290715050067580A /* UITableViewCell+.swift */; };
 		87822FBD2907150C0067580A /* UICollectionViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87822FBC2907150C0067580A /* UICollectionViewCell+.swift */; };
 		87822FBF2907167A0067580A /* ChatViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87822FBE2907167A0067580A /* ChatViewController+CollectionView.swift */; };
@@ -84,6 +88,10 @@
 		8775FA3E29072B99000E08D5 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		8775FA402907E5D4000E08D5 /* ChatHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		8775FA422907F0DA000E08D5 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
+		8775FA492907F889000E08D5 /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		8775FA4B2907FE86000E08D5 /* GalleryViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GalleryViewController+CollectionView.swift"; sourceTree = "<group>"; };
+		8775FA4D2907FEED000E08D5 /* Sample_Gallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample_Gallery.swift; sourceTree = "<group>"; };
+		8775FA4F2907FF71000E08D5 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 		87822FBA290715050067580A /* UITableViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+.swift"; sourceTree = "<group>"; };
 		87822FBC2907150C0067580A /* UICollectionViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+.swift"; sourceTree = "<group>"; };
 		87822FBE2907167A0067580A /* ChatViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatViewController+CollectionView.swift"; sourceTree = "<group>"; };
@@ -210,9 +218,9 @@
 			isa = PBXGroup;
 			children = (
 				875A663228EEAE0B00368248 /* Assets.xcassets */,
-				876BD98F28EF61CD000CCBC8 /* Color */,
-				876BD98728EF4586000CCBC8 /* Storyboard */,
 				876BD98628EF455A000CCBC8 /* Support */,
+				876BD98728EF4586000CCBC8 /* Storyboard */,
+				876BD98F28EF61CD000CCBC8 /* Color */,
 				8775FA392907264C000E08D5 /* SampleData */,
 			);
 			path = Resource;
@@ -229,6 +237,7 @@
 				87C88ABE28F5EC51004D9276 /* Shop */,
 				87C88AB728F5E8FB004D9276 /* My */,
 				87C88AC328F73BC8004D9276 /* Profile */,
+				8775FA452907F83E000E08D5 /* Gallery */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -324,6 +333,7 @@
 			children = (
 				8775FA3A29072665000E08D5 /* Sample.swift */,
 				8775FA3C2907268C000E08D5 /* Sample_Chat.swift */,
+				8775FA4D2907FEED000E08D5 /* Sample_Gallery.swift */,
 			);
 			path = SampleData;
 			sourceTree = "<group>";
@@ -334,6 +344,40 @@
 				87C88AC128F60E3C004D9276 /* DetailProfileViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		8775FA452907F83E000E08D5 /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				8775FA462907F869000E08D5 /* Model */,
+				8775FA482907F876000E08D5 /* View */,
+				8775FA472907F871000E08D5 /* Controller */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		8775FA462907F869000E08D5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8775FA472907F871000E08D5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8775FA492907F889000E08D5 /* GalleryViewController.swift */,
+				8775FA4B2907FE86000E08D5 /* GalleryViewController+CollectionView.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8775FA482907F876000E08D5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8775FA4F2907FF71000E08D5 /* GalleryCollectionViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		87822FB729070E6C0067580A /* Model */ = {
@@ -548,14 +592,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8775FA4E2907FEED000E08D5 /* Sample_Gallery.swift in Sources */,
 				87822FBF2907167A0067580A /* ChatViewController+CollectionView.swift in Sources */,
 				87822FBB290715050067580A /* UITableViewCell+.swift in Sources */,
 				876BD98128EF2A68000CCBC8 /* UIStackView+.swift in Sources */,
 				8721A78D2905486400B8348D /* Profile.swift in Sources */,
+				8775FA4C2907FE86000E08D5 /* GalleryViewController+CollectionView.swift in Sources */,
 				87C88AB928F5EACD004D9276 /* ChatViewController.swift in Sources */,
+				8775FA4A2907F889000E08D5 /* GalleryViewController.swift in Sources */,
 				876BD98E28EF510D000CCBC8 /* AuthTextField.swift in Sources */,
 				876BD98328EF2ABE000CCBC8 /* UIColor+.swift in Sources */,
 				876BD99128EF61DB000CCBC8 /* KakaoColor.swift in Sources */,
+				8775FA502907FF71000E08D5 /* GalleryCollectionViewCell.swift in Sources */,
 				876BD97F28EF2520000CCBC8 /* UIView+.swift in Sources */,
 				8721A78A2905438700B8348D /* BaseNavigationController.swift in Sources */,
 				87C88AB228F53F09004D9276 /* FriendViewController.swift in Sources */,
