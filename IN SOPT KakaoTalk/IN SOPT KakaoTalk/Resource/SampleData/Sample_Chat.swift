@@ -9,7 +9,7 @@ import UIKit
 
 extension Sample{
     static let chatData = [
-                            ChatModel(profileImage: UIImage(named: Image.defaultProfile),
+                            ChatModel(profileImage: UIImage(named: Image.myProfile),
                                       name: "iOS 공지방",
                                       recentMessage: "[3차 보충세미나 및 세미나 자료 형식 수요조사]",
                                       recentMessageTime: "어제",

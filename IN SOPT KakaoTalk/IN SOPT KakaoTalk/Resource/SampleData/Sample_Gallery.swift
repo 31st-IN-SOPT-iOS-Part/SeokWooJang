@@ -13,16 +13,16 @@ extension Sample{
                                 UIImage(named: Image.myProfile),
                                 UIImage(named: Image.myProfile),
                                 UIImage(named: Image.hamburgerProfile),
-                                UIImage(named: Image.swissHotel),
-                                UIImage(named: Image.hamburgerProfile),
-                                UIImage(named: Image.swissHotel),
-                                UIImage(named: Image.myProfile),
-                                UIImage(named: Image.hamburgerProfile),
-                                UIImage(named: Image.myProfile),
-                                UIImage(named: Image.myProfile),
-                                UIImage(named: Image.hamburgerProfile),
-                                UIImage(named: Image.swissHotel),
-                                UIImage(named: Image.hamburgerProfile),
-                                UIImage(named: Image.swissHotel)
+//                                UIImage(named: Image.swissHotel),
+//                                UIImage(named: Image.hamburgerProfile),
+//                                UIImage(named: Image.swissHotel),
+//                                UIImage(named: Image.myProfile),
+//                                UIImage(named: Image.hamburgerProfile),
+//                                UIImage(named: Image.myProfile),
+//                                UIImage(named: Image.myProfile),
+//                                UIImage(named: Image.hamburgerProfile),
+//                                UIImage(named: Image.swissHotel),
+//                                UIImage(named: Image.hamburgerProfile),
+//                                UIImage(named: Image.swissHotel)
                             ]
 }

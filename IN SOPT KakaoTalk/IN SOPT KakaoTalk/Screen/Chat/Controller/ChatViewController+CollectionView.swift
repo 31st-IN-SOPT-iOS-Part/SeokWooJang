@@ -33,7 +33,6 @@ extension ChatViewController: UICollectionViewDelegate, UICollectionViewDataSour
             for: indexPath) as? ChatCollectionViewCell else { return UICollectionViewCell() }
         
         cell.dataBind(chatData[indexPath.row])
-//        cell.setLayout()
         return cell
     }
 }

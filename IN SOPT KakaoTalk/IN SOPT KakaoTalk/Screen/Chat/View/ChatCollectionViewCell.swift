@@ -46,13 +46,7 @@ class ChatCollectionViewCell: UICollectionViewCell {
     
     //MARK: - Custom Method
     
-    
-    func dataBind(_ data: ChatModel?){
-        chatImageView.image = data?.profileImage
-        labelVStackView.dataBind(topText: data?.name, bottomText: data?.recentMessage)
-    }
-    
-    func setLayout(){
+    private func setLayout(){
         
         addSubviews(chatImageView,labelVStackView)
         
@@ -68,6 +62,14 @@ class ChatCollectionViewCell: UICollectionViewCell {
             $0.trailing.equalToSuperview()
         }
         
+    }
+    
+    func dataBind(_ data: ChatModel?){
+        chatImageView.image = data?.profileImage
+        labelVStackView.dataBind(
+                                topText: data?.name,
+                                bottomText: data?.recentMessage
+                                )
     }
     
     

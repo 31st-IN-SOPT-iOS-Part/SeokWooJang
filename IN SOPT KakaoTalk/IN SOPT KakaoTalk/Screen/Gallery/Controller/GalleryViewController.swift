@@ -1,4 +1,4 @@
-//
+// 
 //  GalleryViewController.swift
 //  IN SOPT KakaoTalk
 //
@@ -13,6 +13,8 @@ class GalleryViewController : BaseViewController{
     //MARK: - Properties
     
     var galleryData = Sample.galleryData
+    lazy var selectedImageArray = [Bool](repeating: false, count: galleryData.count)
+    lazy var selectedImageIndex : [Int] = []
     
     //MARK: - UI Components
     
@@ -31,7 +33,7 @@ class GalleryViewController : BaseViewController{
         return button
     }()
     
-    private let galleryCollectionView : UICollectionView = {
+    let galleryCollectionView : UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         
@@ -90,10 +92,5 @@ class GalleryViewController : BaseViewController{
             $0.leading.trailing.equalToSuperview()
             $0.bottom.equalToSuperview()
         }
-        
-        
     }
-    
-    //MARK: - Action Method
-    
 }

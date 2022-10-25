@@ -7,6 +7,7 @@
 
 import UIKit
 
+//MARK: - Delegate, DataSource
 extension GalleryViewController : UICollectionViewDelegate, UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return galleryData.count
@@ -16,12 +17,24 @@ extension GalleryViewController : UICollectionViewDelegate, UICollectionViewData
         guard let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: GalleryCollectionViewCell.cellIdentifier,
             for: indexPath) as? GalleryCollectionViewCell else { return GalleryCollectionViewCell() }
-        cell.dataBind(galleryData[indexPath.count])
+        
+        cell.delegate = self
+        cell.indexPath = indexPath
+        cell.isSelectedImage = selectedImageArray[indexPath.row]
+        
+        
+        if selectedImageArray[indexPath.row]{
+            cell.orderOfSelectedImage = selectedImageIndex.firstIndex(of: indexPath.row)! + 1
+        }
+        
+        cell.dataBind(galleryData[indexPath.row])
+        
         return cell
     }
     
 }
 
+//MARK: - Delegate FlowLayout
 extension GalleryViewController : UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -40,4 +53,24 @@ extension GalleryViewController : UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 5
     }
+}
+
+//MARK: - Cell Delegate
+extension GalleryViewController : GalleryCollectionViewCellDelegate{
+    
+    func cellStateChanged(indexPath: IndexPath, _ isSelected: Bool) {
+        
+        selectedImageArray[indexPath.row].toggle()
+        
+        if isSelected {
+            selectedImageIndex.append(indexPath.row)
+        } else{
+            selectedImageIndex = selectedImageIndex.filter(){ $0 != indexPath.row }
+        }
+        
+        galleryCollectionView.reloadData()
+    }
+    
+
+    
 }

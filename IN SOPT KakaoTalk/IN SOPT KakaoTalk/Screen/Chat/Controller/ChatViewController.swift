@@ -12,7 +12,7 @@ class ChatViewController : BaseViewController{
     
     //MARK: - Properties
     
-    var chatData = Sample.chatData     //[ChatModel]
+    var chatData = Sample.chatData     
     var headerImage = UIImage(named: Image.errorApply)
     
     //MARK: - UI Components
