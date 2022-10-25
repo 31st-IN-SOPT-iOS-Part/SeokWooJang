@@ -11,26 +11,33 @@ import SnapKit
 class ChatCollectionViewCell: UICollectionViewCell {
     
     //MARK: - Properties
-    
-    var chatName : String?
-    var recentMessage : String?
-    
     //MARK: - UI Components
     
     private let chatImageView : UIImageView = {
         let imgView = UIImageView()
-        imgView.layer.cornerRadius = 20
-        imgView.layer.masksToBounds = true
         imgView.contentMode = .scaleAspectFit
+        imgView.layer.cornerRadius = 24
+        imgView.clipsToBounds = true
         return imgView
     }()
-    private lazy var labelVStackView = ChatStackView(frame: .zero, topText: chatName, bottomText: recentMessage)
+    
+    //TODO: 더 탐구해봐야함
+    // ChatStackView는 CustomStackView이다.
+    // ChatStackView 생성할때에는 인자로 String을 주어야한다.
+    // 허나 self인 ChatCollectionViewCell은 초기에 String값으로 nil을 갖고있다.
+    // lazy 키워드를 사용하더라도 AutoLayout 잡을 때 호출되기 떄문에 StackView에는 nil값이 들어간다.
+    // 문제는 Cell에 데이터가 들어오는 상황보다 ChatStackView 인스턴스가 생성되는 시점이 이르다는 것.
+    // 데이터가 들어오기 위해선 ChatStackView이 생성 되는 시점보다 아!!?!?! 함수 만들면 되네 커스텀 객체에다! 해결완료!
+    
+    private lazy var labelVStackView = ChatStackView(frame: .zero, topText: nil, bottomText: nil)
 
     
     //MARK: - Life Cycle
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        setLayout()
     }
     
     required init?(coder: NSCoder) {
@@ -42,8 +49,7 @@ class ChatCollectionViewCell: UICollectionViewCell {
     
     func dataBind(_ data: ChatModel?){
         chatImageView.image = data?.profileImage
-        chatName = data?.name
-        recentMessage = data?.recentMessage
+        labelVStackView.dataBind(topText: data?.name, bottomText: data?.recentMessage)
     }
     
     func setLayout(){
@@ -53,6 +59,7 @@ class ChatCollectionViewCell: UICollectionViewCell {
         chatImageView.snp.makeConstraints {
             $0.top.bottom.equalToSuperview()
             $0.leading.equalToSuperview()
+            $0.width.height.equalTo(55)
         }
         
         labelVStackView.snp.makeConstraints {

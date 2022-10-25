@@ -13,14 +13,14 @@ class ChatStackView: UIStackView{
     private let topView = UIView()
     private let bottomView = UIView()
     
-    private let topLabel : UILabel = {
+    var topLabel : UILabel = {
         let label = UILabel()
         label.textColor = .black
         label.font = .systemFont(ofSize: 17, weight: .medium)
         return label
     }()
     
-    private let bottomLabel : UILabel = {
+    var bottomLabel : UILabel = {
         let label = UILabel()
         label.textColor = .gray
         label.font = .systemFont(ofSize: 14, weight: .regular)
@@ -81,5 +81,10 @@ class ChatStackView: UIStackView{
             $0.leading.equalToSuperview()
         }
         
+    }
+    
+    func dataBind(topText: String? , bottomText: String?){
+        topLabel.text = topText ?? ""
+        bottomLabel.text = bottomText ?? ""
     }
 }
