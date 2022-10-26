@@ -11,6 +11,8 @@ import SnapKit
 //MARK: - Extension: TableView
 
 extension FriendViewController : UITableViewDelegate, UITableViewDataSource {
+    
+    
 
     //MARK: - Section
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -82,8 +84,26 @@ extension FriendViewController : UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
-        
-        
     
+    //MARK: - SwipeActionsConfiguration
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        switch indexPath.section {
+        case 3:
+            let action = UIContextualAction(
+                                            style: .destructive,
+                                            title: "삭제",
+                                            handler: { action, view, completionHandler in
+                                                self.friendData?.remove(at: indexPath.row)
+                                                self.friendTableView.reloadData()
+                                                completionHandler(true)
+                                            })
+            return UISwipeActionsConfiguration(actions: [action])
+        default: return nil
+        }
+        
+        
+    }
     
 }

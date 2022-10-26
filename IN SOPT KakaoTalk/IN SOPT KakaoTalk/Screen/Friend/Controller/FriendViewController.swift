@@ -31,7 +31,7 @@ class FriendViewController : BaseViewController{
     
     //MARK: - UI Components
     
-    private let friendTableView : UITableView = {
+    let friendTableView : UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.separatorStyle = .none
         tableView.translatesAutoresizingMaskIntoConstraints = false

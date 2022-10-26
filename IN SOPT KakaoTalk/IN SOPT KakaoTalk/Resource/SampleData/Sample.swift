@@ -5,7 +5,7 @@
 //  Created by 장석우 on 2022/10/25.
 //
 
-import Foundation
+import UIKit
 struct Sample{
     
 }

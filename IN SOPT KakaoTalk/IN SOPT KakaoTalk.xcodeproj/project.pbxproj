@@ -48,7 +48,7 @@
 		87C88AB228F53F09004D9276 /* FriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C88AB128F53F09004D9276 /* FriendViewController.swift */; };
 		87C88AB428F53FA2004D9276 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C88AB328F53FA2004D9276 /* MainTabBarController.swift */; };
 		87C88AB928F5EACD004D9276 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C88AB828F5EACD004D9276 /* ChatViewController.swift */; };
-		87C88ABB28F5EADE004D9276 /* ViewMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C88ABA28F5EADE004D9276 /* ViewMainViewController.swift */; };
+		87C88ABB28F5EADE004D9276 /* ViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C88ABA28F5EADE004D9276 /* ViewViewController.swift */; };
 		87C88ABD28F5EAE8004D9276 /* MyMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C88ABC28F5EAE8004D9276 /* MyMainViewController.swift */; };
 		87C88AC028F5EC67004D9276 /* ShopMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C88ABF28F5EC67004D9276 /* ShopMainViewController.swift */; };
 		87C88AC228F60E3C004D9276 /* DetailProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C88AC128F60E3C004D9276 /* DetailProfileViewController.swift */; };
@@ -100,7 +100,7 @@
 		87C88AB128F53F09004D9276 /* FriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewController.swift; sourceTree = "<group>"; };
 		87C88AB328F53FA2004D9276 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		87C88AB828F5EACD004D9276 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
-		87C88ABA28F5EADE004D9276 /* ViewMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMainViewController.swift; sourceTree = "<group>"; };
+		87C88ABA28F5EADE004D9276 /* ViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewViewController.swift; sourceTree = "<group>"; };
 		87C88ABC28F5EAE8004D9276 /* MyMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMainViewController.swift; sourceTree = "<group>"; };
 		87C88ABF28F5EC67004D9276 /* ShopMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopMainViewController.swift; sourceTree = "<group>"; };
 		87C88AC128F60E3C004D9276 /* DetailProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProfileViewController.swift; sourceTree = "<group>"; };
@@ -430,7 +430,7 @@
 		87C88AB628F5E8ED004D9276 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				87C88ABA28F5EADE004D9276 /* ViewMainViewController.swift */,
+				87C88ABA28F5EADE004D9276 /* ViewViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -628,7 +628,7 @@
 				8721A79629054EC300B8348D /* Friend.swift in Sources */,
 				8775FA3829072543000E08D5 /* ChatModel.swift in Sources */,
 				87C88AC028F5EC67004D9276 /* ShopMainViewController.swift in Sources */,
-				87C88ABB28F5EADE004D9276 /* ViewMainViewController.swift in Sources */,
+				87C88ABB28F5EADE004D9276 /* ViewViewController.swift in Sources */,
 				87822FC1290717410067580A /* ChatCollectionViewCell.swift in Sources */,
 				8775FA3D2907268C000E08D5 /* Sample_Chat.swift in Sources */,
 				8775FA3B29072665000E08D5 /* Sample.swift in Sources */,

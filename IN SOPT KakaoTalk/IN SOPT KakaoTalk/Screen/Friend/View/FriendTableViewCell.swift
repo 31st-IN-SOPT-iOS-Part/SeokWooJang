@@ -62,12 +62,12 @@ class FriendTableViewCell : UITableViewCell{
         backgroundColor = .white
         
         labelVStackView.addArrangedSubViews(profileNameLabel,statusMessageLabel)
-        addSubviews(profileImageView,labelVStackView)
+        contentView.addSubviews(profileImageView,labelVStackView)
         
         profileImageView.snp.makeConstraints {
             $0.centerY.equalToSuperview()
             $0.leading.equalToSuperview()
-            $0.height.width.equalTo(50)
+            $0.height.width.equalTo(contentView.snp.height)
         }
         
         labelVStackView.snp.makeConstraints {

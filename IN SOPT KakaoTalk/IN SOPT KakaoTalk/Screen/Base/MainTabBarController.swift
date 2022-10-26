@@ -11,7 +11,7 @@ class MainTabBarController: UITabBarController {
     
     let friendNVC = BaseNavigationController(rootViewController: FriendViewController())
     let chatVC = BaseNavigationController(rootViewController: ChatViewController())
-    let viewVC = BaseNavigationController(rootViewController: ViewMainViewController())
+    let viewVC = BaseNavigationController(rootViewController: ViewViewController())
     let shopVC = BaseNavigationController(rootViewController: ShopMainViewController())
     let myVC = BaseNavigationController(rootViewController: MyMainViewController())
     
@@ -24,7 +24,7 @@ class MainTabBarController: UITabBarController {
         setTabBar()
         
         viewControllers = [friendNVC,chatVC,viewVC,shopVC,myVC]
-        selectedIndex = 1
+        selectedIndex = 0
     }
     
     //MARK: - Custom Method
@@ -36,7 +36,7 @@ class MainTabBarController: UITabBarController {
     
     private func setViewController(){
         friendNVC.tabBarItem = UITabBarItem(title: nil,
-                                           image: UIImage(systemName: "person"),
+                                           image: UIImage(systemName: "bell"),
                                            selectedImage: UIImage(systemName: "person.fill"))
         chatVC.tabBarItem = UITabBarItem(title: nil,
                                          image: UIImage(systemName: "bubble.left"),
