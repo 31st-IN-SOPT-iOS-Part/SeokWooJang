@@ -64,6 +64,10 @@ class GalleryViewController : BaseViewController{
         galleryCollectionView.register(
             GalleryCollectionViewCell.self,
             forCellWithReuseIdentifier: GalleryCollectionViewCell.cellIdentifier)
+        
+        galleryCollectionView.register(
+            GalleryCameraCollectionViewCell.self,
+            forCellWithReuseIdentifier: GalleryCameraCollectionViewCell.cellIdentifier)
     }
     
     private func setUI(){

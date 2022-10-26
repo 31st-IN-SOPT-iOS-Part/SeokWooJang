@@ -14,22 +14,34 @@ extension GalleryViewController : UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: GalleryCollectionViewCell.cellIdentifier,
-            for: indexPath) as? GalleryCollectionViewCell else { return GalleryCollectionViewCell() }
         
-        cell.delegate = self
-        cell.indexPath = indexPath
-        cell.isSelectedImage = selectedImageArray[indexPath.row]
-        
-        
-        if selectedImageArray[indexPath.row]{
-            cell.orderOfSelectedImage = selectedImageIndex.firstIndex(of: indexPath.row)! + 1
+        if indexPath.row == 0 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GalleryCameraCollectionViewCell.cellIdentifier, for: indexPath)
+            return cell
+        } else {
+            guard let cell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: GalleryCollectionViewCell.cellIdentifier,
+                for: indexPath) as? GalleryCollectionViewCell else { return GalleryCollectionViewCell() }
+            
+            cell.delegate = self
+            cell.indexPath = indexPath
+            cell.isSelectedImage = selectedImageArray[indexPath.row]
+            
+            
+            if selectedImageArray[indexPath.row]{
+                cell.orderOfSelectedImage = selectedImageIndex.firstIndex(of: indexPath.row)! + 1
+            }
+            
+            cell.dataBind(galleryData[indexPath.row])
+            
+            return cell
         }
-        
-        cell.dataBind(galleryData[indexPath.row])
-        
-        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            print("카메라 버튼 눌렸음")
+        }
     }
     
 }

@@ -12,4 +12,5 @@ struct Image {
     static let myProfile = "my_profile"
     static let swissHotel = "swiss_hotel"
     static let hamburgerProfile = "hamburger_profile"
+    static let camera = "camera"
 }
