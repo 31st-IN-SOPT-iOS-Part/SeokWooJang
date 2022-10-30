@@ -12,13 +12,6 @@ class FriendViewController : BaseViewController{
     
     //MARK: - Properties
     
-    enum sections : String, CaseIterable{
-        case me = ""
-        case birth = "생일인 친구"
-        case update = "업데이트한 친구"
-        case friend = "친구"
-    }
-    
     var myName : String? {
         didSet{
             profileNameLabel.text = myName
@@ -97,6 +90,9 @@ class FriendViewController : BaseViewController{
             forCellReuseIdentifier: FriendTableViewCell.cellIdentifier
         )
         
+        friendTableView.register(
+            FriendHeaderView.self,
+            forHeaderFooterViewReuseIdentifier: FriendHeaderView.viewIdentifier)
     }
     
     private func setUI(){

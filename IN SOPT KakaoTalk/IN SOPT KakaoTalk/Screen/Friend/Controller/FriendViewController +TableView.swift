@@ -14,18 +14,23 @@ extension FriendViewController : UITableViewDelegate, UITableViewDataSource {
 
     //MARK: - Section
     func numberOfSections(in tableView: UITableView) -> Int {
-        return sections.allCases.count
+        return 4
     }
     
     //MARK: - Header
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: FriendHeaderView.viewIdentifier) as! FriendHeaderView
+        
         switch section{
-        case 0: return errorBanner
-        case 1: return FriendHeaderView(frame: .zero, title: sections.birth.rawValue)
-        case 2: return FriendHeaderView(frame: .zero, title: sections.update.rawValue)
-        case 3: return FriendHeaderView(frame: .zero, title: sections.friend.rawValue)
+        case 0: view.dataBind(section: .me)
+        case 1: view.dataBind(section: .birth)
+        case 2: view.dataBind(section: .update)
+        case 3: view.dataBind(section: .friend)
         default: return nil
         }
+        
+        return view
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

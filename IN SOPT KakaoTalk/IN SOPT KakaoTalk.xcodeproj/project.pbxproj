@@ -42,6 +42,7 @@
 		8775FA502907FF71000E08D5 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8775FA4F2907FF71000E08D5 /* GalleryCollectionViewCell.swift */; };
 		8775FA522909213A000E08D5 /* GalleryCameraCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8775FA512909213A000E08D5 /* GalleryCameraCollectionViewCell.swift */; };
 		8775FA542909252F000E08D5 /* FriendFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8775FA532909252F000E08D5 /* FriendFooterView.swift */; };
+		8775FA56290F084B000E08D5 /* HeaderSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8775FA55290F084B000E08D5 /* HeaderSection.swift */; };
 		87822FBB290715050067580A /* UITableViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87822FBA290715050067580A /* UITableViewCell+.swift */; };
 		87822FBD2907150C0067580A /* UICollectionViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87822FBC2907150C0067580A /* UICollectionViewCell+.swift */; };
 		87822FBF2907167A0067580A /* ChatViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87822FBE2907167A0067580A /* ChatViewController+CollectionView.swift */; };
@@ -96,6 +97,7 @@
 		8775FA4F2907FF71000E08D5 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 		8775FA512909213A000E08D5 /* GalleryCameraCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCameraCollectionViewCell.swift; sourceTree = "<group>"; };
 		8775FA532909252F000E08D5 /* FriendFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendFooterView.swift; sourceTree = "<group>"; };
+		8775FA55290F084B000E08D5 /* HeaderSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSection.swift; sourceTree = "<group>"; };
 		87822FBA290715050067580A /* UITableViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+.swift"; sourceTree = "<group>"; };
 		87822FBC2907150C0067580A /* UICollectionViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+.swift"; sourceTree = "<group>"; };
 		87822FBE2907167A0067580A /* ChatViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatViewController+CollectionView.swift"; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				8721A79529054EC300B8348D /* Friend.swift */,
+				8775FA55290F084B000E08D5 /* HeaderSection.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -634,6 +637,7 @@
 				87822FBD2907150C0067580A /* UICollectionViewCell+.swift in Sources */,
 				8721A79A2905A3D000B8348D /* FriendHeaderView.swift in Sources */,
 				8721A79629054EC300B8348D /* Friend.swift in Sources */,
+				8775FA56290F084B000E08D5 /* HeaderSection.swift in Sources */,
 				8775FA3829072543000E08D5 /* ChatModel.swift in Sources */,
 				87C88AC028F5EC67004D9276 /* ShopMainViewController.swift in Sources */,
 				87C88ABB28F5EADE004D9276 /* ViewViewController.swift in Sources */,

@@ -14,6 +14,3 @@ struct ChatModel{
     let numbersOfNotReadMessage : Int
     
 }
-extension ChatModel{
-    static let chatModel = ["asdf"]
-}
