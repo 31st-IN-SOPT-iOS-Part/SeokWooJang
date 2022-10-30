@@ -56,10 +56,14 @@ class FriendTableViewCell : UITableViewCell{
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 7, left: 0, bottom: 7, right: 0))
+    }
+    
     //MARK: - Custom Method
     
     private func setLayout(){
-        backgroundColor = .white
         
         labelVStackView.addArrangedSubViews(profileNameLabel,statusMessageLabel)
         contentView.addSubviews(profileImageView,labelVStackView)
@@ -76,7 +80,7 @@ class FriendTableViewCell : UITableViewCell{
             $0.trailing.equalToSuperview()
                             
         }
-        
+    
     }
     
     func dataBind(_ data: Profile?){

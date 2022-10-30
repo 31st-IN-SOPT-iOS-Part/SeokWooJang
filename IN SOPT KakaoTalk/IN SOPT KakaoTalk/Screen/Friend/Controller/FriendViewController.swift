@@ -35,6 +35,8 @@ class FriendViewController : BaseViewController{
         let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.separatorStyle = .none
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.sectionHeaderTopPadding = 5
+        tableView.backgroundColor = .white
         return tableView
     }()
     

@@ -11,8 +11,6 @@ import SnapKit
 //MARK: - Extension: TableView
 
 extension FriendViewController : UITableViewDelegate, UITableViewDataSource {
-    
-    
 
     //MARK: - Section
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -33,26 +31,25 @@ extension FriendViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         switch section{
         case 0: return 70
-        default: return 30
+        default: return 27
         }
     }
     
     //MARK: - Footer
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let view = UIView()
-        view.backgroundColor = .systemGray5
-        return view
+        let footerView = FriendFooterView(frame: .zero)
+        return footerView
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        1
+        5
     }
     
     
     
     //MARK: - Cell
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        60
+        70
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -80,7 +77,6 @@ extension FriendViewController : UITableViewDelegate, UITableViewDataSource {
         case 3: cell.dataBind(friendData?[indexPath.row])
         default: return UITableViewCell()
         }
-        
         
         return cell
     }

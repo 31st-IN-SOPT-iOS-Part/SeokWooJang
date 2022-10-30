@@ -41,6 +41,7 @@
 		8775FA4E2907FEED000E08D5 /* Sample_Gallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8775FA4D2907FEED000E08D5 /* Sample_Gallery.swift */; };
 		8775FA502907FF71000E08D5 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8775FA4F2907FF71000E08D5 /* GalleryCollectionViewCell.swift */; };
 		8775FA522909213A000E08D5 /* GalleryCameraCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8775FA512909213A000E08D5 /* GalleryCameraCollectionViewCell.swift */; };
+		8775FA542909252F000E08D5 /* FriendFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8775FA532909252F000E08D5 /* FriendFooterView.swift */; };
 		87822FBB290715050067580A /* UITableViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87822FBA290715050067580A /* UITableViewCell+.swift */; };
 		87822FBD2907150C0067580A /* UICollectionViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87822FBC2907150C0067580A /* UICollectionViewCell+.swift */; };
 		87822FBF2907167A0067580A /* ChatViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87822FBE2907167A0067580A /* ChatViewController+CollectionView.swift */; };
@@ -94,6 +95,7 @@
 		8775FA4D2907FEED000E08D5 /* Sample_Gallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample_Gallery.swift; sourceTree = "<group>"; };
 		8775FA4F2907FF71000E08D5 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 		8775FA512909213A000E08D5 /* GalleryCameraCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCameraCollectionViewCell.swift; sourceTree = "<group>"; };
+		8775FA532909252F000E08D5 /* FriendFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendFooterView.swift; sourceTree = "<group>"; };
 		87822FBA290715050067580A /* UITableViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+.swift"; sourceTree = "<group>"; };
 		87822FBC2907150C0067580A /* UICollectionViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+.swift"; sourceTree = "<group>"; };
 		87822FBE2907167A0067580A /* ChatViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatViewController+CollectionView.swift"; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 			children = (
 				8721A797290556C200B8348D /* FriendTableViewCell.swift */,
 				8721A7992905A3D000B8348D /* FriendHeaderView.swift */,
+				8775FA532909252F000E08D5 /* FriendFooterView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -605,6 +608,7 @@
 				87C88AB928F5EACD004D9276 /* ChatViewController.swift in Sources */,
 				8775FA4A2907F889000E08D5 /* GalleryViewController.swift in Sources */,
 				876BD98E28EF510D000CCBC8 /* AuthTextField.swift in Sources */,
+				8775FA542909252F000E08D5 /* FriendFooterView.swift in Sources */,
 				876BD98328EF2ABE000CCBC8 /* UIColor+.swift in Sources */,
 				876BD99128EF61DB000CCBC8 /* KakaoColor.swift in Sources */,
 				8775FA502907FF71000E08D5 /* GalleryCollectionViewCell.swift in Sources */,
