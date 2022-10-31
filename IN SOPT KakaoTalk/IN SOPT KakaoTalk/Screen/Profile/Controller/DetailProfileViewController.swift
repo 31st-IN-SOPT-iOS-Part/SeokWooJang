@@ -179,6 +179,14 @@ class DetailProfileViewController : UIViewController{
         return stackView
     }
     
+    func dataBind(_ profile: Profile?){
+        
+        backgroundImageView.image = profile?.backgroundImage
+        profileImageView.image = profile?.profileImage
+        nameLabel.text = profile?.name
+        
+    }
+    
     
     //MARK: - Action Method
     

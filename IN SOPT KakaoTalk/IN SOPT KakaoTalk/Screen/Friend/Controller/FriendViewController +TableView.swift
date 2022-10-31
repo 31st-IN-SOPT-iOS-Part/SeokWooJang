@@ -86,6 +86,22 @@ extension FriendViewController : UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let profileVC = DetailProfileViewController()
+        profileVC.modalPresentationStyle = .fullScreen
+        
+        switch indexPath.section{
+        case 0: profileVC.dataBind(myData)
+        case 1: profileVC.dataBind(birthFriendData?[indexPath.row])
+        case 2: return
+        case 3: profileVC.dataBind(friendData?[indexPath.row])
+        default: print("\(#function) - default Section 선택됨")
+        }
+        
+        present(profileVC, animated: true)
+    }
+    
     //MARK: - SwipeActionsConfiguration
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
