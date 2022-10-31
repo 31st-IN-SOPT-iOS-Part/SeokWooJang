@@ -84,7 +84,7 @@ extension FriendViewController : UITableViewDelegate, UITableViewDataSource {
             
         case 2:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: FriendUpdateTableViewCell.cellIdentifier) as? FriendUpdateTableViewCell else { return UITableViewCell() }
-            cell.dataBind(updateData)
+            cell.dataBind(updateData, self)
             return cell
             
         case 3:
@@ -131,8 +131,18 @@ extension FriendViewController : UITableViewDelegate, UITableViewDataSource {
             return UISwipeActionsConfiguration(actions: [action])
         default: return nil
         }
-        
-        
+    }
+}
+//MARK: - Cell Delegate
+extension FriendViewController : FriendTableViewCellDelegate{
+    
+    func cellSelected(indexPath: IndexPath) {
+        let profileVC = DetailProfileViewController()
+        profileVC.modalPresentationStyle = .fullScreen
+        profileVC.dataBind(updateData?[indexPath.row])
+        present(profileVC, animated: true)
     }
     
+    
 }
+

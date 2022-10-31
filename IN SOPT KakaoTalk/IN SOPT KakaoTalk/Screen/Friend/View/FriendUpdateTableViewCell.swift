@@ -8,11 +8,17 @@
 import UIKit
 import SnapKit
 
+
+protocol FriendTableViewCellDelegate {
+    func cellSelected(indexPath: IndexPath)
+}
+
 class FriendUpdateTableViewCell : UITableViewCell{
     
     //MARK: - Properties
     
     var profileData : [Profile]?
+    var delegate : FriendTableViewCellDelegate?
     
     //MARK: - UI Components
     
@@ -62,15 +68,18 @@ class FriendUpdateTableViewCell : UITableViewCell{
         }
     }
     
-    func dataBind(_ profiles: [Profile]?){
-        profileData = profiles
+    func dataBind(_ profiles: [Profile]?,_ delegate: FriendTableViewCellDelegate){
+        self.profileData = profiles
+        self.delegate = delegate
     }
     
 }
+
+//MARK: - CollectionView Delegate, DataSource
 extension FriendUpdateTableViewCell : UICollectionViewDelegate,UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        8
+        profileData?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -80,6 +89,10 @@ extension FriendUpdateTableViewCell : UICollectionViewDelegate,UICollectionViewD
         cell.dataBind(profileData?[indexPath.row])
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.cellSelected(indexPath: indexPath)
     }
 }
 //MARK: - CollectionView FlowLayout
