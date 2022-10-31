@@ -63,7 +63,7 @@ class ChatCollectionViewCell: UICollectionViewCell {
         
     }
     
-    func dataBind(_ data: ChatModel?){
+    func dataBind(_ data: Chat?){
         chatImageView.image = data?.profileImage
         labelVStackView.dataBind(
                                 topText: data?.name,

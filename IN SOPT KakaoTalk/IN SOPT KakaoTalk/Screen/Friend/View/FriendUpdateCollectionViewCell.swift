@@ -50,7 +50,6 @@ class FriendUpdateCollectionViewCell : UICollectionViewCell{
         fatalError("init(coder:) has not been implemented")
     }
     
-    
     override func layoutSubviews() {
         DispatchQueue.main.async {
             self.setCornerRadius()
@@ -74,7 +73,6 @@ class FriendUpdateCollectionViewCell : UICollectionViewCell{
     }
     
     private func setCornerRadius(){
-        print("Height & Width = \(profileImageView.frame.height) - \(profileImageView.frame.width)")
         profileImageView.makeCornerRound(radius: 2.2)
     }
     

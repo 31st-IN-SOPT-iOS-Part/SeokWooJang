@@ -8,18 +8,44 @@
 import Foundation
 
 extension Sample{
-    static let updateData = [
-                                Profile.myProfile,
-                                Profile.hamburgerProfile,
-                                Profile.gildongProfile,
-                                Profile.hamburgerProfile,
-                                Profile.myProfile,
-                                Profile.gildongProfile,
-                                Profile.myProfile,
-                                Profile.hamburgerProfile,
-                                Profile.gildongProfile,
-                                Profile.hamburgerProfile,
-                                Profile.gildongProfile,
-                                Profile.gildongProfile
-                            ]
+    
+    static let friendBirthData = [
+                                    Sample.profileHamburgerData,
+                                    Sample.profileGildongData
+                                 ]
+    
+    static let friendFriendData = [
+                                    Sample.profileMyData,
+                                    Sample.profileHamburgerData,
+                                    Sample.profileGildongData,
+                                    Sample.profileHamburgerData,
+                                    Sample.profileMyData,
+                                    Sample.profileGildongData,
+                                    Sample.profileMyData,
+                                    Sample.profileHamburgerData,
+                                    Sample.profileGildongData,
+                                    Sample.profileHamburgerData,
+                                    Sample.profileGildongData,
+                                    Sample.profileGildongData,
+                                    Sample.profileMyData,
+                                    Sample.profileHamburgerData,
+                                    Sample.profileMyData,
+                                    Sample.profileHamburgerData,
+                                 ]
+    
+    
+    static let friendUpdateData = [
+                                    Sample.profileMyData,
+                                    Sample.profileHamburgerData,
+                                    Sample.profileGildongData,
+                                    Sample.profileHamburgerData,
+                                    Sample.profileMyData,
+                                    Sample.profileGildongData,
+                                    Sample.profileMyData,
+                                    Sample.profileHamburgerData,
+                                    Sample.profileGildongData,
+                                    Sample.profileHamburgerData,
+                                    Sample.profileGildongData,
+                                    Sample.profileGildongData
+                                   ]
 }

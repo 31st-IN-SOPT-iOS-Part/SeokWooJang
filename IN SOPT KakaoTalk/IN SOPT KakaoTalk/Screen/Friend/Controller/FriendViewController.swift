@@ -87,7 +87,6 @@ class FriendViewController : BaseViewController{
         friendTableView.delegate = self
         friendTableView.dataSource = self
         
-        
         friendTableView.register(
             FriendHeaderView.self,
             forHeaderFooterViewReuseIdentifier: FriendHeaderView.viewIdentifier)
@@ -128,11 +127,11 @@ class FriendViewController : BaseViewController{
     
     private func setData(){
         myName = UserDefaults.standard.string(forKey: "myName")
-        myData = Profile.myProfile
-        birthFriendData = Friend.birthData
+        myData = Sample.profileMyData
+        birthFriendData = Sample.friendBirthData
         birthFriendData?.append(Profile.birthProfile)
-        friendData = Friend.friendData
-        updateData = Sample.updateData
+        friendData = Sample.friendFriendData
+        updateData = Sample.friendUpdateData
     }
     
 }

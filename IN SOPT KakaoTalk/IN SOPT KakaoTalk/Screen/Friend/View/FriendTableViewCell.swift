@@ -87,10 +87,10 @@ class FriendTableViewCell : UITableViewCell{
     func dataBind(_ data: Profile?){
         profileImageView.image = data?.profileImage
         profileNameLabel.text = data?.name
-        if data?.stateMessage?.isEmpty ?? true{
+        if data?.statusMessage?.isEmpty ?? true{
             statusMessageLabel.isHidden = true
         } else {
-            statusMessageLabel.text = data?.stateMessage
+            statusMessageLabel.text = data?.statusMessage
         }
     }
     

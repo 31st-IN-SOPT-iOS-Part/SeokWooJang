@@ -6,7 +6,7 @@
 //
 
 import Foundation
-struct StateMusic {
+struct StatusMusic {
     let signer : String
     let title : String
 }

@@ -6,11 +6,10 @@
 //
 
 import UIKit
-struct ChatModel{
+struct Chat{
     let profileImage : UIImage?
     let name : String
     let recentMessage : String
     let recentMessageTime : String
     let numbersOfNotReadMessage : Int
-    
 }
