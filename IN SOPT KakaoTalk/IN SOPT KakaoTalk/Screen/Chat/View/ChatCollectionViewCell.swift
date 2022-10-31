@@ -47,7 +47,6 @@ class ChatCollectionViewCell: UICollectionViewCell {
     //MARK: - Custom Method
     
     private func setLayout(){
-        
         addSubviews(chatImageView,labelVStackView)
         
         chatImageView.snp.makeConstraints {

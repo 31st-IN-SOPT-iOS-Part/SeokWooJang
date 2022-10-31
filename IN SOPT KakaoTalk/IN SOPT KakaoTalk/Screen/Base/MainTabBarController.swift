@@ -36,7 +36,7 @@ class MainTabBarController: UITabBarController {
     
     private func setViewController(){
         friendNVC.tabBarItem = UITabBarItem(title: nil,
-                                           image: UIImage(systemName: "bell"),
+                                           image: UIImage(systemName: "person"),
                                            selectedImage: UIImage(systemName: "person.fill"))
         chatVC.tabBarItem = UITabBarItem(title: nil,
                                          image: UIImage(systemName: "bubble.left"),

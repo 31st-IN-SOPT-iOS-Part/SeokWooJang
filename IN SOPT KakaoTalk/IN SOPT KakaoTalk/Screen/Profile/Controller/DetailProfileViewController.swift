@@ -105,7 +105,7 @@ class DetailProfileViewController : UIViewController{
         backgroundImageView.addSubviews(alphaBlackView,dismissButton)
         backgroundImageView.addSubviews(totalStackView,lineView,profileImageView,nameLabel)
         
-        //MARK: 위에서부터 레이아웃 잡음
+        // 위에서부터 레이아웃 잡음
         backgroundImageView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
@@ -120,7 +120,7 @@ class DetailProfileViewController : UIViewController{
             $0.width.height.equalTo(25)
         }
         
-      //MARK: 아래서부터 레이아웃 잡음
+      // 아래서부터 레이아웃 잡음
         totalStackView.snp.makeConstraints {
             $0.bottom.equalToSuperview().offset(-50)
             $0.leading.trailing.equalToSuperview().inset(30)

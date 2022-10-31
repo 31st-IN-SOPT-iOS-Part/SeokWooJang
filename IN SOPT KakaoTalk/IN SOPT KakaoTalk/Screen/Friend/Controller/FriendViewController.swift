@@ -21,6 +21,7 @@ class FriendViewController : BaseViewController{
     var myData : Profile?
     var birthFriendData : [Profile]?
     var friendData : [Profile]?
+    var updateData : [Profile]?
     
     //MARK: - UI Components
     
@@ -79,20 +80,27 @@ class FriendViewController : BaseViewController{
         setData()
     }
     
+    
     //MARK: - Custom Method
     
     private func setDelegate(){
         friendTableView.delegate = self
         friendTableView.dataSource = self
         
-        friendTableView.register(
-            FriendTableViewCell.self,
-            forCellReuseIdentifier: FriendTableViewCell.cellIdentifier
-        )
         
         friendTableView.register(
             FriendHeaderView.self,
             forHeaderFooterViewReuseIdentifier: FriendHeaderView.viewIdentifier)
+        
+        friendTableView.register(
+            FriendTableViewCell.self,
+            forCellReuseIdentifier: FriendTableViewCell.cellIdentifier
+        )
+        friendTableView.register(
+            FriendUpdateTableViewCell.self,
+            forCellReuseIdentifier: FriendUpdateTableViewCell.cellIdentifier
+        )
+        
     }
     
     private func setUI(){
@@ -103,7 +111,7 @@ class FriendViewController : BaseViewController{
         
         navigationView.addSubview(friendTitleLabel)
         
-        view.addSubview( friendTableView )
+        view.addSubview(friendTableView)
         
         friendTitleLabel.snp.makeConstraints {
             $0.top.equalToSuperview().offset(5)
@@ -124,6 +132,7 @@ class FriendViewController : BaseViewController{
         birthFriendData = Friend.birthData
         birthFriendData?.append(Profile.birthProfile)
         friendData = Friend.friendData
+        updateData = Sample.updateData
     }
     
 }

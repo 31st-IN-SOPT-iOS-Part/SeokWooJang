@@ -61,7 +61,7 @@ extension FriendViewController : UITableViewDelegate, UITableViewDataSource {
         switch section{
         case 0: return 1
         case 1: return birthFriendData?.count ?? 1
-        case 2: return 0
+        case 2: return 1
         case 3: return friendData?.count ?? 0
         default: return 0
         }
@@ -71,19 +71,31 @@ extension FriendViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: FriendTableViewCell.cellIdentifier, for: indexPath) as? FriendTableViewCell else { return UITableViewCell() }
-        //TODO: tableview cell 속 collectionView 넣어야함 ;;
-        let collectionCell = UITableViewCell()
-        
         switch indexPath.section{
-        case 0: cell.dataBind(myData)
-        case 1: cell.dataBind(birthFriendData?[indexPath.row])
-        case 2: return collectionCell
-        case 3: cell.dataBind(friendData?[indexPath.row])
+        case 0:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: FriendTableViewCell.cellIdentifier, for: indexPath) as? FriendTableViewCell else { return UITableViewCell() }
+            cell.dataBind(myData)
+            return cell
+            
+        case 1:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: FriendTableViewCell.cellIdentifier, for: indexPath) as? FriendTableViewCell else { return UITableViewCell() }
+            cell.dataBind(birthFriendData?[indexPath.row])
+            return cell
+            
+        case 2:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: FriendUpdateTableViewCell.cellIdentifier) as? FriendUpdateTableViewCell else { return UITableViewCell() }
+            cell.dataBind(updateData)
+            return cell
+            
+        case 3:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: FriendTableViewCell.cellIdentifier, for: indexPath) as? FriendTableViewCell else { return UITableViewCell() }
+            cell.dataBind(friendData?[indexPath.row])
+            return cell
+            
         default: return UITableViewCell()
         }
         
-        return cell
+      
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

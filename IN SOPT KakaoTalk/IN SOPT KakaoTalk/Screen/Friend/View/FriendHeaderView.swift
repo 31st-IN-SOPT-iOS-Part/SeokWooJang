@@ -46,7 +46,7 @@ class FriendHeaderView : UITableViewHeaderFooterView {
     //MARK: - Custom Method
     
     private func setUI(){
-        self.backgroundColor = .white
+        contentView.backgroundColor = .white
     }
     private func setLayout(){
         self.addSubview(titleLabel)

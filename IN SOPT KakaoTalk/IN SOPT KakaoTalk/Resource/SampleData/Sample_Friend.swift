@@ -1,38 +1,25 @@
 //
-//  Friend.swift
+//  Sample_Friend.swift
 //  IN SOPT KakaoTalk
 //
-//  Created by 장석우 on 2022/10/23.
+//  Created by 장석우 on 2022/10/31.
 //
 
-import UIKit
+import Foundation
 
-struct Friend {
-    
-    static let birthData = [
-                            Profile.hamburgerProfile,
-                            Profile.gildongProfile
+extension Sample{
+    static let updateData = [
+                                Profile.myProfile,
+                                Profile.hamburgerProfile,
+                                Profile.gildongProfile,
+                                Profile.hamburgerProfile,
+                                Profile.myProfile,
+                                Profile.gildongProfile,
+                                Profile.myProfile,
+                                Profile.hamburgerProfile,
+                                Profile.gildongProfile,
+                                Profile.hamburgerProfile,
+                                Profile.gildongProfile,
+                                Profile.gildongProfile
                             ]
-    
-    static let friendData = [
-                                Profile.myProfile,
-                                Profile.hamburgerProfile,
-                                Profile.gildongProfile,
-                                Profile.hamburgerProfile,
-                                Profile.myProfile,
-                                Profile.gildongProfile,
-                                Profile.myProfile,
-                                Profile.hamburgerProfile,
-                                Profile.gildongProfile,
-                                Profile.hamburgerProfile,
-                                Profile.gildongProfile,
-                                Profile.gildongProfile,
-                                Profile.myProfile,
-                                Profile.hamburgerProfile,
-                                Profile.myProfile,
-                                Profile.hamburgerProfile,
-                            ]
-    
 }
-
-

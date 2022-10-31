@@ -43,6 +43,9 @@
 		8775FA522909213A000E08D5 /* GalleryCameraCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8775FA512909213A000E08D5 /* GalleryCameraCollectionViewCell.swift */; };
 		8775FA542909252F000E08D5 /* FriendFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8775FA532909252F000E08D5 /* FriendFooterView.swift */; };
 		8775FA56290F084B000E08D5 /* HeaderSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8775FA55290F084B000E08D5 /* HeaderSection.swift */; };
+		8775FA58290FB3A4000E08D5 /* FriendUpdateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8775FA57290FB3A4000E08D5 /* FriendUpdateCollectionViewCell.swift */; };
+		8775FA5A290FB4BB000E08D5 /* FriendUpdateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8775FA59290FB4BB000E08D5 /* FriendUpdateTableViewCell.swift */; };
+		8775FA5C290FCFE6000E08D5 /* Sample_Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8775FA5B290FCFE6000E08D5 /* Sample_Friend.swift */; };
 		87822FBB290715050067580A /* UITableViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87822FBA290715050067580A /* UITableViewCell+.swift */; };
 		87822FBD2907150C0067580A /* UICollectionViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87822FBC2907150C0067580A /* UICollectionViewCell+.swift */; };
 		87822FBF2907167A0067580A /* ChatViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87822FBE2907167A0067580A /* ChatViewController+CollectionView.swift */; };
@@ -98,6 +101,9 @@
 		8775FA512909213A000E08D5 /* GalleryCameraCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCameraCollectionViewCell.swift; sourceTree = "<group>"; };
 		8775FA532909252F000E08D5 /* FriendFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendFooterView.swift; sourceTree = "<group>"; };
 		8775FA55290F084B000E08D5 /* HeaderSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSection.swift; sourceTree = "<group>"; };
+		8775FA57290FB3A4000E08D5 /* FriendUpdateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendUpdateCollectionViewCell.swift; sourceTree = "<group>"; };
+		8775FA59290FB4BB000E08D5 /* FriendUpdateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendUpdateTableViewCell.swift; sourceTree = "<group>"; };
+		8775FA5B290FCFE6000E08D5 /* Sample_Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample_Friend.swift; sourceTree = "<group>"; };
 		87822FBA290715050067580A /* UITableViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+.swift"; sourceTree = "<group>"; };
 		87822FBC2907150C0067580A /* UICollectionViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+.swift"; sourceTree = "<group>"; };
 		87822FBE2907167A0067580A /* ChatViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatViewController+CollectionView.swift"; sourceTree = "<group>"; };
@@ -160,9 +166,11 @@
 		8721A7872905424E00B8348D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8721A797290556C200B8348D /* FriendTableViewCell.swift */,
 				8721A7992905A3D000B8348D /* FriendHeaderView.swift */,
 				8775FA532909252F000E08D5 /* FriendFooterView.swift */,
+				8721A797290556C200B8348D /* FriendTableViewCell.swift */,
+				8775FA59290FB4BB000E08D5 /* FriendUpdateTableViewCell.swift */,
+				8775FA57290FB3A4000E08D5 /* FriendUpdateCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -340,6 +348,7 @@
 			isa = PBXGroup;
 			children = (
 				8775FA3A29072665000E08D5 /* Sample.swift */,
+				8775FA5B290FCFE6000E08D5 /* Sample_Friend.swift */,
 				8775FA3C2907268C000E08D5 /* Sample_Chat.swift */,
 				8775FA4D2907FEED000E08D5 /* Sample_Gallery.swift */,
 			);
@@ -603,6 +612,7 @@
 			files = (
 				8775FA4E2907FEED000E08D5 /* Sample_Gallery.swift in Sources */,
 				87822FBF2907167A0067580A /* ChatViewController+CollectionView.swift in Sources */,
+				8775FA5A290FB4BB000E08D5 /* FriendUpdateTableViewCell.swift in Sources */,
 				87822FBB290715050067580A /* UITableViewCell+.swift in Sources */,
 				876BD98128EF2A68000CCBC8 /* UIStackView+.swift in Sources */,
 				8775FA522909213A000E08D5 /* GalleryCameraCollectionViewCell.swift in Sources */,
@@ -610,6 +620,7 @@
 				8775FA4C2907FE86000E08D5 /* GalleryViewController+CollectionView.swift in Sources */,
 				87C88AB928F5EACD004D9276 /* ChatViewController.swift in Sources */,
 				8775FA4A2907F889000E08D5 /* GalleryViewController.swift in Sources */,
+				8775FA58290FB3A4000E08D5 /* FriendUpdateCollectionViewCell.swift in Sources */,
 				876BD98E28EF510D000CCBC8 /* AuthTextField.swift in Sources */,
 				8775FA542909252F000E08D5 /* FriendFooterView.swift in Sources */,
 				876BD98328EF2ABE000CCBC8 /* UIColor+.swift in Sources */,
@@ -623,6 +634,7 @@
 				8775FA432907F0DA000E08D5 /* UIImage+.swift in Sources */,
 				875A662E28EEAE0A00368248 /* SignInViewController.swift in Sources */,
 				873586FB28EEB9EF0036624B /* WelcomeViewController.swift in Sources */,
+				8775FA5C290FCFE6000E08D5 /* Sample_Friend.swift in Sources */,
 				87C88AC228F60E3C004D9276 /* DetailProfileViewController.swift in Sources */,
 				8775FA412907E5D4000E08D5 /* ChatHeaderCollectionReusableView.swift in Sources */,
 				8721A7912905491C00B8348D /* StateMusic.swift in Sources */,
