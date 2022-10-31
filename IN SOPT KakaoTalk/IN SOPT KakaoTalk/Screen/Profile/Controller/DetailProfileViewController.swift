@@ -41,8 +41,6 @@ class DetailProfileViewController : UIViewController{
         let imageView = UIImageView()
         imageView.image = UIImage(named: "my_profile")
         imageView.contentMode = .scaleAspectFill
-        imageView.layer.cornerRadius = 35
-        imageView.layer.masksToBounds = true
         return imageView
     }()
     
@@ -92,6 +90,10 @@ class DetailProfileViewController : UIViewController{
         setUI()
         setLayout()
         setGesture()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        setCornerRadius()
     }
     
     //MARK: - Custom Method
@@ -147,6 +149,10 @@ class DetailProfileViewController : UIViewController{
         
     }
     
+    private func setCornerRadius(){
+        profileImageView.makeCornerRound(radius: 2.2)
+    }
+    
     private func setGesture(){
         let myChatGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(stackViewTapped))
         let editProfileGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(stackViewTapped))
@@ -156,6 +162,8 @@ class DetailProfileViewController : UIViewController{
         editProfileStackView.addGestureRecognizer(editProfileGestureRecognizer)
         kakaoStoryStackView.addGestureRecognizer(kakaoStoryGestureRecognizer)
     }
+    
+    
     
     private func makeStackView(image: UIImage?, text: String) -> UIStackView{
         

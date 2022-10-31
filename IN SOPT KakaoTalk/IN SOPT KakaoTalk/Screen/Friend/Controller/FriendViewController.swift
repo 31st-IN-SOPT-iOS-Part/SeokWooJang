@@ -12,11 +12,8 @@ class FriendViewController : BaseViewController{
     
     //MARK: - Properties
     
-    var myName : String? {
-        didSet{
-            profileNameLabel.text = myName
-        }
-    }
+    var myName : String?
+    
     
     var myData : Profile?
     var birthFriendData : [Profile]?
@@ -25,15 +22,6 @@ class FriendViewController : BaseViewController{
     
     //MARK: - UI Components
     
-    let friendTableView : UITableView = {
-        let tableView = UITableView(frame: .zero, style: .grouped)
-        tableView.separatorStyle = .none
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.sectionHeaderTopPadding = 5
-        tableView.backgroundColor = .white
-        return tableView
-    }()
-    
     private let friendTitleLabel : UILabel = {
         let label = UILabel()
         label.text = "친구"
@@ -41,29 +29,13 @@ class FriendViewController : BaseViewController{
         return label
     }()
     
-    let errorBanner : UIImageView = {
-        let imgView = UIImageView()
-        imgView.image = UIImage(named: Image.errorApply)
-        imgView.contentMode = .scaleAspectFit
-        imgView.layer.cornerRadius = 5
-        return imgView
-    }()
-    
-    private let profileNameLabel : UILabel = {
-        let label = UILabel()
-        label.textColor = .black
-        label.font = .systemFont(ofSize: 20, weight: .medium)
-        return label
-    }()
-    
-    private lazy var profileImageView : UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "my_profile")
-        imageView.contentMode = .scaleAspectFill
-        imageView.layer.cornerRadius = 25
-        imageView.layer.masksToBounds = true
-        imageView.isUserInteractionEnabled = true
-        return imageView
+    let friendTableView : UITableView = {
+        let tableView = UITableView(frame: .zero, style: .grouped)
+        tableView.separatorStyle = .none
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.sectionHeaderTopPadding = 5
+        tableView.backgroundColor = .white
+        return tableView
     }()
     
     //MARK: - Life Cycle
@@ -78,6 +50,9 @@ class FriendViewController : BaseViewController{
     
     override func viewWillAppear(_ animated: Bool) {
         setData()
+    }
+    override func viewDidLayoutSubviews() {
+        setCornerRadius()
     }
     
     
@@ -123,6 +98,9 @@ class FriendViewController : BaseViewController{
             $0.bottom.equalToSuperview()
         }
         
+    }
+    
+    private func setCornerRadius(){
     }
     
     private func setData(){

@@ -15,9 +15,7 @@ class ChatCollectionViewCell: UICollectionViewCell {
     
     private let chatImageView : UIImageView = {
         let imgView = UIImageView()
-        imgView.contentMode = .scaleAspectFit
-        imgView.layer.cornerRadius = 24
-        imgView.clipsToBounds = true
+        imgView.contentMode = .scaleAspectFill
         return imgView
     }()
     
@@ -44,6 +42,12 @@ class ChatCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func layoutSubviews() {
+        DispatchQueue.main.async {
+            self.setCornerRadius()
+        }
+    }
+    
     //MARK: - Custom Method
     
     private func setLayout(){
@@ -61,6 +65,10 @@ class ChatCollectionViewCell: UICollectionViewCell {
             $0.trailing.equalToSuperview()
         }
         
+    }
+    
+    private func setCornerRadius(){
+        chatImageView.makeCornerRound(radius: 2.2)
     }
     
     func dataBind(_ data: Chat?){

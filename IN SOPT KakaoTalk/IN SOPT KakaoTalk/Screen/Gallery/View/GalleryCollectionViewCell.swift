@@ -34,12 +34,10 @@ class GalleryCollectionViewCell: UICollectionViewCell {
     }()
     
     private lazy var indexButton : UIButton = {
-        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 25, height: 25))
+        let button = UIButton()
         button.backgroundColor = .systemGray6
         button.layer.borderWidth = 2
         button.layer.borderColor = UIColor.darkGray.cgColor
-        button.layer.cornerRadius = button.bounds.width / 2
-        button.clipsToBounds = true
         button.alpha = 0.7
         button.setTitleColor(.black, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 16, weight: .medium)
@@ -59,6 +57,12 @@ class GalleryCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func layoutSubviews() {
+        DispatchQueue.main.async {
+            self.setCornerRadius()
+        }
+    }
+    
     //MARK: - Custom Method
     
     private func setLayout(){
@@ -74,6 +78,10 @@ class GalleryCollectionViewCell: UICollectionViewCell {
             $0.trailing.equalToSuperview().inset(7)
             $0.height.width.equalTo(25)
         }
+    }
+    
+    private func setCornerRadius(){
+        indexButton.makeCornerRound(radius: 2)
     }
     
     func dataBind(_ data: UIImage?){

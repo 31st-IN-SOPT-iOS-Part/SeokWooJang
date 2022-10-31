@@ -133,6 +133,7 @@ extension FriendViewController : UITableViewDelegate, UITableViewDataSource {
         }
     }
 }
+
 //MARK: - Cell Delegate
 extension FriendViewController : FriendTableViewCellDelegate{
     

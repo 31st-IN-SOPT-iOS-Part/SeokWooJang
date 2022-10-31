@@ -14,8 +14,6 @@ class FriendTableViewCell : UITableViewCell{
     
     private let profileImageView : UIImageView = {
         let imgView = UIImageView()
-        imgView.layer.cornerRadius = 20
-        imgView.layer.masksToBounds = true
         imgView.contentMode = .scaleAspectFit
         return imgView
     }()
@@ -58,7 +56,9 @@ class FriendTableViewCell : UITableViewCell{
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
+        DispatchQueue.main.async {
+            self.setCornerRadius()
+        }
         contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 7, left: 0, bottom: 7, right: 0))
     }
     
@@ -84,6 +84,9 @@ class FriendTableViewCell : UITableViewCell{
     
     }
     
+    private func setCornerRadius(){
+        profileImageView.makeCornerRound(radius: 2.2)
+    }
     func dataBind(_ data: Profile?){
         profileImageView.image = data?.profileImage
         profileNameLabel.text = data?.name
