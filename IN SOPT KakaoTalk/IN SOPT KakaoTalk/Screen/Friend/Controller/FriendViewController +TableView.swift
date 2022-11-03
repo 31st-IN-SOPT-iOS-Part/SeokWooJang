@@ -54,7 +54,11 @@ extension FriendViewController : UITableViewDelegate, UITableViewDataSource {
     
     //MARK: - Cell
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        70
+        if indexPath == IndexPath(row: 0, section: 0) {
+                    return 80
+                } else {
+                    return 70
+                }
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -74,7 +78,7 @@ extension FriendViewController : UITableViewDelegate, UITableViewDataSource {
         switch indexPath.section{
         case 0:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: FriendTableViewCell.cellIdentifier, for: indexPath) as? FriendTableViewCell else { return UITableViewCell() }
-            cell.dataBind(myData)
+            cell.dataBind(myData, true)
             return cell
             
         case 1:
@@ -102,7 +106,7 @@ extension FriendViewController : UITableViewDelegate, UITableViewDataSource {
         
         let profileVC = DetailProfileViewController()
         profileVC.modalPresentationStyle = .fullScreen
-        
+
         switch indexPath.section{
         case 0: profileVC.dataBind(myData)
         case 1: profileVC.dataBind(birthFriendData?[indexPath.row])
@@ -110,7 +114,7 @@ extension FriendViewController : UITableViewDelegate, UITableViewDataSource {
         case 3: profileVC.dataBind(friendData?[indexPath.row])
         default: print("\(#function) - default Section 선택됨")
         }
-        
+
         present(profileVC, animated: true)
     }
     

@@ -108,7 +108,11 @@ class ChatViewController : BaseViewController{
             ChatCollectionViewCell.self,
             forCellWithReuseIdentifier: ChatCollectionViewCell.cellIdentifier
         )
-        chatCollectionView.register(ChatHeaderCollectionReusableView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: ChatHeaderCollectionReusableView.viewIdentifier)
+        
+        chatCollectionView.register(
+            ChatHeaderCollectionReusableView.self,
+            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+            withReuseIdentifier: ChatHeaderCollectionReusableView.viewIdentifier)
         
         
     }

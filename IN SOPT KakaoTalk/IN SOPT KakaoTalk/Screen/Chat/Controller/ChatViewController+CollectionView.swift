@@ -12,6 +12,7 @@ extension ChatViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     //MARK: - Header
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
         guard let headerView = collectionView.dequeueReusableSupplementaryView(
             ofKind: UICollectionView.elementKindSectionHeader,
             withReuseIdentifier: ChatHeaderCollectionReusableView.viewIdentifier,

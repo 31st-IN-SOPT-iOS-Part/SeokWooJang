@@ -10,7 +10,7 @@ import SnapKit
 
 class FriendTableViewCell : UITableViewCell{
     
-    //MARK: - Properties
+    //MARK: - UI Components
     
     private let profileImageView : UIImageView = {
         let imgView = UIImageView()
@@ -56,6 +56,7 @@ class FriendTableViewCell : UITableViewCell{
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        
         DispatchQueue.main.async {
             self.setCornerRadius()
         }
@@ -87,7 +88,11 @@ class FriendTableViewCell : UITableViewCell{
     private func setCornerRadius(){
         profileImageView.makeCornerRound(radius: 2.2)
     }
+    
+    
+    
     func dataBind(_ data: Profile?){
+        
         profileImageView.image = data?.profileImage
         profileNameLabel.text = data?.name
         if data?.statusMessage?.isEmpty ?? true{
@@ -95,6 +100,16 @@ class FriendTableViewCell : UITableViewCell{
         } else {
             statusMessageLabel.text = data?.statusMessage
         }
+    }
+    
+    func dataBind(_ data: Profile?,_ isMyProfile : Bool){
+        
+        dataBind(data)
+        
+        if isMyProfile{
+            profileNameLabel.font = .systemFont(ofSize: 18, weight: .medium)
+        }
+        
     }
     
     

@@ -12,8 +12,8 @@ class MainTabBarController: UITabBarController {
     let friendNVC = BaseNavigationController(rootViewController: FriendViewController())
     let chatVC = BaseNavigationController(rootViewController: ChatViewController())
     let viewVC = BaseNavigationController(rootViewController: ViewViewController())
-    let shopVC = BaseNavigationController(rootViewController: ShopMainViewController())
-    let myVC = BaseNavigationController(rootViewController: MyMainViewController())
+    let shopVC = BaseNavigationController(rootViewController: ShopViewController())
+    let myVC = BaseNavigationController(rootViewController: MyViewController())
     
     //MARK: - Life Cycle
     

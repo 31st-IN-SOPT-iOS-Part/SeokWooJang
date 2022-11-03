@@ -55,8 +55,8 @@
 		87C88AB428F53FA2004D9276 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C88AB328F53FA2004D9276 /* MainTabBarController.swift */; };
 		87C88AB928F5EACD004D9276 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C88AB828F5EACD004D9276 /* ChatViewController.swift */; };
 		87C88ABB28F5EADE004D9276 /* ViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C88ABA28F5EADE004D9276 /* ViewViewController.swift */; };
-		87C88ABD28F5EAE8004D9276 /* MyMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C88ABC28F5EAE8004D9276 /* MyMainViewController.swift */; };
-		87C88AC028F5EC67004D9276 /* ShopMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C88ABF28F5EC67004D9276 /* ShopMainViewController.swift */; };
+		87C88ABD28F5EAE8004D9276 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C88ABC28F5EAE8004D9276 /* MyViewController.swift */; };
+		87C88AC028F5EC67004D9276 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C88ABF28F5EC67004D9276 /* ShopViewController.swift */; };
 		87C88AC228F60E3C004D9276 /* DetailProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C88AC128F60E3C004D9276 /* DetailProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -113,8 +113,8 @@
 		87C88AB328F53FA2004D9276 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		87C88AB828F5EACD004D9276 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		87C88ABA28F5EADE004D9276 /* ViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewViewController.swift; sourceTree = "<group>"; };
-		87C88ABC28F5EAE8004D9276 /* MyMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMainViewController.swift; sourceTree = "<group>"; };
-		87C88ABF28F5EC67004D9276 /* ShopMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopMainViewController.swift; sourceTree = "<group>"; };
+		87C88ABC28F5EAE8004D9276 /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
+		87C88ABF28F5EC67004D9276 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		87C88AC128F60E3C004D9276 /* DetailProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -456,7 +456,7 @@
 		87C88AB728F5E8FB004D9276 /* My */ = {
 			isa = PBXGroup;
 			children = (
-				87C88ABC28F5EAE8004D9276 /* MyMainViewController.swift */,
+				87C88ABC28F5EAE8004D9276 /* MyViewController.swift */,
 			);
 			path = My;
 			sourceTree = "<group>";
@@ -464,7 +464,7 @@
 		87C88ABE28F5EC51004D9276 /* Shop */ = {
 			isa = PBXGroup;
 			children = (
-				87C88ABF28F5EC67004D9276 /* ShopMainViewController.swift */,
+				87C88ABF28F5EC67004D9276 /* ShopViewController.swift */,
 			);
 			path = Shop;
 			sourceTree = "<group>";
@@ -651,12 +651,12 @@
 				8721A79A2905A3D000B8348D /* FriendHeaderView.swift in Sources */,
 				8775FA56290F084B000E08D5 /* HeaderSection.swift in Sources */,
 				8775FA3829072543000E08D5 /* Chat.swift in Sources */,
-				87C88AC028F5EC67004D9276 /* ShopMainViewController.swift in Sources */,
+				87C88AC028F5EC67004D9276 /* ShopViewController.swift in Sources */,
 				87C88ABB28F5EADE004D9276 /* ViewViewController.swift in Sources */,
 				87822FC1290717410067580A /* ChatCollectionViewCell.swift in Sources */,
 				8775FA3D2907268C000E08D5 /* Sample_Chat.swift in Sources */,
 				8775FA3B29072665000E08D5 /* Sample.swift in Sources */,
-				87C88ABD28F5EAE8004D9276 /* MyMainViewController.swift in Sources */,
+				87C88ABD28F5EAE8004D9276 /* MyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
