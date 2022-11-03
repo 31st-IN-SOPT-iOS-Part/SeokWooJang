@@ -10,7 +10,7 @@ import SnapKit
 
 
 protocol FriendTableViewCellDelegate {
-    func cellSelected(indexPath: IndexPath)
+    func updateFriendCellSelected(indexPath: IndexPath)
 }
 
 class FriendUpdateTableViewCell : UITableViewCell{
@@ -92,7 +92,7 @@ extension FriendUpdateTableViewCell : UICollectionViewDelegate,UICollectionViewD
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.cellSelected(indexPath: indexPath)
+        delegate?.updateFriendCellSelected(indexPath: indexPath)
     }
 }
 //MARK: - CollectionView FlowLayout

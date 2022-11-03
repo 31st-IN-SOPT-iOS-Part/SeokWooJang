@@ -11,6 +11,7 @@ import SnapKit
 class ChatCollectionViewCell: UICollectionViewCell {
     
     //MARK: - Properties
+
     //MARK: - UI Components
     
     private let chatImageView : UIImageView = {

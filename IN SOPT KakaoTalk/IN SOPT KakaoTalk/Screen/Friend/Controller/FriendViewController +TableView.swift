@@ -54,11 +54,13 @@ extension FriendViewController : UITableViewDelegate, UITableViewDataSource {
     
     //MARK: - Cell
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
         if indexPath == IndexPath(row: 0, section: 0) {
-                    return 80
-                } else {
-                    return 70
-                }
+            return 80
+        } else {
+            return 70
+            
+        }
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -141,7 +143,7 @@ extension FriendViewController : UITableViewDelegate, UITableViewDataSource {
 //MARK: - Cell Delegate
 extension FriendViewController : FriendTableViewCellDelegate{
     
-    func cellSelected(indexPath: IndexPath) {
+    func updateFriendCellSelected(indexPath: IndexPath) {
         let profileVC = DetailProfileViewController()
         profileVC.modalPresentationStyle = .fullScreen
         profileVC.dataBind(updateData?[indexPath.row])

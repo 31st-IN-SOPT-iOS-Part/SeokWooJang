@@ -13,6 +13,7 @@ class GalleryViewController : BaseViewController{
     //MARK: - Properties
     
     var galleryData = Sample.galleryData
+    
     lazy var selectedImageArray = [Bool](repeating: false, count: galleryData.count)
     lazy var selectedImageIndex : [Int] = []
     

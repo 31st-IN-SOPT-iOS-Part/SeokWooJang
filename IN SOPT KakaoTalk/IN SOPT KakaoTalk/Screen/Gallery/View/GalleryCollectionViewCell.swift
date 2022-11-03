@@ -84,8 +84,22 @@ class GalleryCollectionViewCell: UICollectionViewCell {
         indexButton.makeCornerRound(radius: 2)
     }
     
-    func dataBind(_ data: UIImage?){
-        imageView.image = data
+    func dataBind(
+                  _ image: UIImage?,
+                  delegate: GalleryCollectionViewCellDelegate,
+                  _ indexPath: IndexPath,
+                  _ isSelectedImage: Bool,
+                  _ orderOfSelectedImage: Int?)
+    {
+        self.imageView.image = image
+        self.delegate = delegate
+        self.indexPath = indexPath
+        self.isSelectedImage = isSelectedImage
+        
+        if orderOfSelectedImage != nil {
+            self.orderOfSelectedImage = orderOfSelectedImage! + 1
+        }
+        
         setSelectedCell()
     }
     
@@ -98,6 +112,7 @@ class GalleryCollectionViewCell: UICollectionViewCell {
             indexButton.backgroundColor = .kakaoYellow
             indexButton.alpha = 1
             indexButton.setTitle(String(orderOfSelectedImage!), for: .normal)
+            
         } else{
             imageView.layer.borderColor = UIColor.clear.cgColor
             
