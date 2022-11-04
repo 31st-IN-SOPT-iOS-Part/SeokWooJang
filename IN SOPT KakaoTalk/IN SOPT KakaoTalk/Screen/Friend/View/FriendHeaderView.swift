@@ -37,10 +37,16 @@ class FriendHeaderView : UITableViewHeaderFooterView {
         super.init(reuseIdentifier: reuseIdentifier)
         setUI()
         setLayout()
+        
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        bannerImageView.isHidden = true
     }
     
     //MARK: - Custom Method
@@ -70,6 +76,8 @@ class FriendHeaderView : UITableViewHeaderFooterView {
         case .update: titleLabel.text = "업데이트한 친구"
         case .friend: titleLabel.text = "친구"
         }
+        
+        setLayout()
     }
     
 }

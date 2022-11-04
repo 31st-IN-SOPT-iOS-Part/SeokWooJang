@@ -46,7 +46,7 @@ class FriendTableViewCell : UITableViewCell{
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        selectionStyle = .none
+        setUI()
         setLayout()
     }
     
@@ -60,10 +60,22 @@ class FriendTableViewCell : UITableViewCell{
         DispatchQueue.main.async {
             self.setCornerRadius()
         }
+        
         contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 7, left: 0, bottom: 7, right: 0))
+        
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        profileNameLabel.font = .systemFont(ofSize: 16, weight: .regular)
+        statusMessageLabel.isHidden = false
     }
     
     //MARK: - Custom Method
+    
+    private func setUI(){
+        selectionStyle = .none
+    }
     
     private func setLayout(){
         
@@ -95,6 +107,7 @@ class FriendTableViewCell : UITableViewCell{
         
         profileImageView.image = data?.profileImage
         profileNameLabel.text = data?.name
+        
         if data?.statusMessage?.isEmpty ?? true{
             statusMessageLabel.isHidden = true
         } else {
@@ -102,7 +115,7 @@ class FriendTableViewCell : UITableViewCell{
         }
     }
     
-    func dataBind(_ data: Profile?,_ isMyProfile : Bool){
+    func dataBind(_ data: Profile?,isMyProfile : Bool){
         
         dataBind(data)
         

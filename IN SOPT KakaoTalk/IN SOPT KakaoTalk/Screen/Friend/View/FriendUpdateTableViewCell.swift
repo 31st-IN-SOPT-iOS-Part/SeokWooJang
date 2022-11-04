@@ -68,7 +68,7 @@ class FriendUpdateTableViewCell : UITableViewCell{
         }
     }
     
-    func dataBind(_ profiles: [Profile]?,_ delegate: FriendTableViewCellDelegate){
+    func dataBind(_ profiles: [Profile]?,delegate: FriendTableViewCellDelegate){
         self.profileData = profiles
         self.delegate = delegate
     }
@@ -86,6 +86,7 @@ extension FriendUpdateTableViewCell : UICollectionViewDelegate,UICollectionViewD
         guard let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: FriendUpdateCollectionViewCell.cellIdentifier,
             for: indexPath) as? FriendUpdateCollectionViewCell else { return UICollectionViewCell() }
+        
         cell.dataBind(profileData?[indexPath.row])
         
         return cell

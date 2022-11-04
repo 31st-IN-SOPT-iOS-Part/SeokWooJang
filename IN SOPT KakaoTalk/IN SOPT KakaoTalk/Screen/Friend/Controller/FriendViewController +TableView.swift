@@ -59,7 +59,6 @@ extension FriendViewController : UITableViewDelegate, UITableViewDataSource {
             return 80
         } else {
             return 70
-            
         }
     }
 
@@ -80,7 +79,7 @@ extension FriendViewController : UITableViewDelegate, UITableViewDataSource {
         switch indexPath.section{
         case 0:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: FriendTableViewCell.cellIdentifier, for: indexPath) as? FriendTableViewCell else { return UITableViewCell() }
-            cell.dataBind(myData, true)
+            cell.dataBind(myData,isMyProfile: true)
             return cell
             
         case 1:
@@ -90,12 +89,13 @@ extension FriendViewController : UITableViewDelegate, UITableViewDataSource {
             
         case 2:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: FriendUpdateTableViewCell.cellIdentifier) as? FriendUpdateTableViewCell else { return UITableViewCell() }
-            cell.dataBind(updateData, self)
+            cell.dataBind(updateData,delegate: self)
             return cell
             
         case 3:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: FriendTableViewCell.cellIdentifier, for: indexPath) as? FriendTableViewCell else { return UITableViewCell() }
             cell.dataBind(friendData?[indexPath.row])
+            print("\(indexPath.row)셀의 selected 값:  \(cell.isSelected)")
             return cell
             
         default: return UITableViewCell()
