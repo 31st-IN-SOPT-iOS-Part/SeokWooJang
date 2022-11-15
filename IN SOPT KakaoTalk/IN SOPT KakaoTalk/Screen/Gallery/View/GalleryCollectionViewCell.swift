@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-protocol GalleryCollectionViewCellDelegate {
+protocol GalleryCollectionViewCellDelegate: AnyObject {
     func cellStateChanged(indexPath: IndexPath, _ isSelected: Bool)
 }
 
@@ -16,7 +16,7 @@ class GalleryCollectionViewCell: UICollectionViewCell {
     
     //MARK: - Properties
 
-    var delegate : GalleryCollectionViewCellDelegate?
+    weak var delegate : GalleryCollectionViewCellDelegate?
     var indexPath : IndexPath?
     var isSelectedImage = false
     var orderOfSelectedImage : Int?
