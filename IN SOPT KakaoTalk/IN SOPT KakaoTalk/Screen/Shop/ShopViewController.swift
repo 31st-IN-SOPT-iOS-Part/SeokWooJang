@@ -1,5 +1,5 @@
 //
-//  ChatMainViewController.swift
+//  ShopMainViewController.swift
 //  IN SOPT KakaoTalk
 //
 //  Created by 장석우 on 2022/10/12.
@@ -8,7 +8,7 @@
 import UIKit
 import SnapKit
 
-class ChatMainViewController : UIViewController{
+class ShopViewController : UIViewController{
     
     //MARK: - Properties
     

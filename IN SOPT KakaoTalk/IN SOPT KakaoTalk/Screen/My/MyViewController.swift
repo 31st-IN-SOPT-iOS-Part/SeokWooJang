@@ -1,16 +1,24 @@
 //
-//  ViewMainViewController.swift
+//  MyMainViewController.swift
 //  IN SOPT KakaoTalk
 //
 //  Created by 장석우 on 2022/10/12.
 //
+
 import UIKit
 import SnapKit
 
-class ViewMainViewController : UIViewController{
+class MyViewController : UIViewController{
     
     //MARK: - Properties
-    
+    private let myCollectionView : UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        return collectionView
+    }()
     
     //MARK: - Life Cycle
     

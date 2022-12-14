@@ -9,11 +9,11 @@ import UIKit
 
 class MainTabBarController: UITabBarController {
     
-    let friendNVC = BaseNavigationController(rootViewController: FriendMainViewController())
-    let chatVC = BaseNavigationController(rootViewController: ChatMainViewController())
-    let viewVC = BaseNavigationController(rootViewController: ViewMainViewController())
-    let shopVC = BaseNavigationController(rootViewController: ShopMainViewController())
-    let myVC = BaseNavigationController(rootViewController: MyMainViewController())
+    let friendNVC = BaseNavigationController(rootViewController: FriendViewController())
+    let chatVC = BaseNavigationController(rootViewController: ChatViewController())
+    let viewVC = BaseNavigationController(rootViewController: ViewViewController())
+    let shopVC = BaseNavigationController(rootViewController: ShopViewController())
+    let myVC = BaseNavigationController(rootViewController: MyViewController())
     
     //MARK: - Life Cycle
     
@@ -24,6 +24,7 @@ class MainTabBarController: UITabBarController {
         setTabBar()
         
         viewControllers = [friendNVC,chatVC,viewVC,shopVC,myVC]
+        selectedIndex = 0
     }
     
     //MARK: - Custom Method

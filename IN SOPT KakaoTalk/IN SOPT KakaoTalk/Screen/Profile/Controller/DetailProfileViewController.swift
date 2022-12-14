@@ -41,8 +41,6 @@ class DetailProfileViewController : UIViewController{
         let imageView = UIImageView()
         imageView.image = UIImage(named: "my_profile")
         imageView.contentMode = .scaleAspectFill
-        imageView.layer.cornerRadius = 35
-        imageView.layer.masksToBounds = true
         return imageView
     }()
     
@@ -94,6 +92,10 @@ class DetailProfileViewController : UIViewController{
         setGesture()
     }
     
+    override func viewDidLayoutSubviews() {
+        setCornerRadius()
+    }
+    
     //MARK: - Custom Method
     
     private func setUI(){
@@ -105,7 +107,7 @@ class DetailProfileViewController : UIViewController{
         backgroundImageView.addSubviews(alphaBlackView,dismissButton)
         backgroundImageView.addSubviews(totalStackView,lineView,profileImageView,nameLabel)
         
-        //MARK: 위에서부터 레이아웃 잡음
+        // 위에서부터 레이아웃 잡음
         backgroundImageView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
@@ -120,7 +122,7 @@ class DetailProfileViewController : UIViewController{
             $0.width.height.equalTo(25)
         }
         
-      //MARK: 아래서부터 레이아웃 잡음
+      // 아래서부터 레이아웃 잡음
         totalStackView.snp.makeConstraints {
             $0.bottom.equalToSuperview().offset(-50)
             $0.leading.trailing.equalToSuperview().inset(30)
@@ -147,6 +149,10 @@ class DetailProfileViewController : UIViewController{
         
     }
     
+    private func setCornerRadius(){
+        profileImageView.makeCornerRound(radius: 2.2)
+    }
+    
     private func setGesture(){
         let myChatGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(stackViewTapped))
         let editProfileGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(stackViewTapped))
@@ -156,6 +162,8 @@ class DetailProfileViewController : UIViewController{
         editProfileStackView.addGestureRecognizer(editProfileGestureRecognizer)
         kakaoStoryStackView.addGestureRecognizer(kakaoStoryGestureRecognizer)
     }
+    
+    
     
     private func makeStackView(image: UIImage?, text: String) -> UIStackView{
         
@@ -177,6 +185,14 @@ class DetailProfileViewController : UIViewController{
         stackView.alignment = .center
         
         return stackView
+    }
+    
+    func dataBind(_ profile: Profile?){
+        
+        backgroundImageView.image = profile?.backgroundImage
+        profileImageView.image = profile?.profileImage
+        nameLabel.text = profile?.name
+        
     }
     
     

@@ -92,7 +92,6 @@ class WelcomeViewController : UIViewController{
     @objc private func confirmButtonPressed(){
         //goToSignInVC()
         UserDefaults.standard.set(email, forKey: "myName")
-        print(email)
         goToMainTabBarController()
     }
     
